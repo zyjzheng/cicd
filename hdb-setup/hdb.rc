@@ -1,0 +1,26 @@
+err() {
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >&2
+  exit 1
+}
+
+log() {
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >&1
+  echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >> log.txt
+}
+
+check_err() {
+  $1 2>&1 >> /dev/null  || err $2
+}
+
+MYSQL_HOST=127.0.0.1
+MYSQL_USERNAME=root
+MYSQL_PASSWORD=p0o9i8u7
+
+check_err "which mysql" "Add mysql client to PATH first"
+
+MYSQL_CMD=`which mysql`
+
+
+HDB_SQL_FILE=hdb.sql
+
+HDB_ADMIN_URL=http://192.168.5.197
