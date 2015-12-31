@@ -11,11 +11,13 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- 导出 db_hdb_admin 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_admin`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_admin` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_admin`;
 
 
 -- 导出  表 db_hdb_admin.admin_instock 结构
+DROP TABLE IF EXISTS `admin_instock`;
 CREATE TABLE IF NOT EXISTS `admin_instock` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `org_id` bigint(20) NOT NULL DEFAULT '0',
@@ -34,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `admin_instock` (
 
 
 -- 导出  表 db_hdb_admin.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -42,11 +45,13 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出 db_hdb_core 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_core`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_core` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_core`;
 
 
 -- 导出  表 db_hdb_core.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -55,6 +60,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdb_core.org_account_points 结构
+DROP TABLE IF EXISTS `org_account_points`;
 CREATE TABLE IF NOT EXISTS `org_account_points` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `org_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '组织账户ID',
@@ -72,6 +78,7 @@ CREATE TABLE IF NOT EXISTS `org_account_points` (
 
 
 -- 导出  表 db_hdb_core.points_payment_00 结构
+DROP TABLE IF EXISTS `points_payment_00`;
 CREATE TABLE IF NOT EXISTS `points_payment_00` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -91,6 +98,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_00` (
 
 
 -- 导出  表 db_hdb_core.points_payment_01 结构
+DROP TABLE IF EXISTS `points_payment_01`;
 CREATE TABLE IF NOT EXISTS `points_payment_01` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -110,6 +118,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_01` (
 
 
 -- 导出  表 db_hdb_core.points_payment_02 结构
+DROP TABLE IF EXISTS `points_payment_02`;
 CREATE TABLE IF NOT EXISTS `points_payment_02` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -129,6 +138,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_02` (
 
 
 -- 导出  表 db_hdb_core.points_payment_03 结构
+DROP TABLE IF EXISTS `points_payment_03`;
 CREATE TABLE IF NOT EXISTS `points_payment_03` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -148,6 +158,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_03` (
 
 
 -- 导出  表 db_hdb_core.points_payment_04 结构
+DROP TABLE IF EXISTS `points_payment_04`;
 CREATE TABLE IF NOT EXISTS `points_payment_04` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -167,6 +178,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_04` (
 
 
 -- 导出  表 db_hdb_core.points_payment_05 结构
+DROP TABLE IF EXISTS `points_payment_05`;
 CREATE TABLE IF NOT EXISTS `points_payment_05` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -186,6 +198,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_05` (
 
 
 -- 导出  表 db_hdb_core.points_payment_06 结构
+DROP TABLE IF EXISTS `points_payment_06`;
 CREATE TABLE IF NOT EXISTS `points_payment_06` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -205,6 +218,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_06` (
 
 
 -- 导出  表 db_hdb_core.points_payment_07 结构
+DROP TABLE IF EXISTS `points_payment_07`;
 CREATE TABLE IF NOT EXISTS `points_payment_07` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -224,6 +238,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_07` (
 
 
 -- 导出  表 db_hdb_core.points_payment_08 结构
+DROP TABLE IF EXISTS `points_payment_08`;
 CREATE TABLE IF NOT EXISTS `points_payment_08` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -243,6 +258,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_08` (
 
 
 -- 导出  表 db_hdb_core.points_payment_09 结构
+DROP TABLE IF EXISTS `points_payment_09`;
 CREATE TABLE IF NOT EXISTS `points_payment_09` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -262,6 +278,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_09` (
 
 
 -- 导出  表 db_hdb_core.points_payment_10 结构
+DROP TABLE IF EXISTS `points_payment_10`;
 CREATE TABLE IF NOT EXISTS `points_payment_10` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -281,6 +298,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_10` (
 
 
 -- 导出  表 db_hdb_core.points_payment_11 结构
+DROP TABLE IF EXISTS `points_payment_11`;
 CREATE TABLE IF NOT EXISTS `points_payment_11` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -300,6 +318,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_11` (
 
 
 -- 导出  表 db_hdb_core.points_payment_12 结构
+DROP TABLE IF EXISTS `points_payment_12`;
 CREATE TABLE IF NOT EXISTS `points_payment_12` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -319,6 +338,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_12` (
 
 
 -- 导出  表 db_hdb_core.points_payment_13 结构
+DROP TABLE IF EXISTS `points_payment_13`;
 CREATE TABLE IF NOT EXISTS `points_payment_13` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -338,6 +358,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_13` (
 
 
 -- 导出  表 db_hdb_core.points_payment_14 结构
+DROP TABLE IF EXISTS `points_payment_14`;
 CREATE TABLE IF NOT EXISTS `points_payment_14` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -357,6 +378,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_14` (
 
 
 -- 导出  表 db_hdb_core.points_payment_15 结构
+DROP TABLE IF EXISTS `points_payment_15`;
 CREATE TABLE IF NOT EXISTS `points_payment_15` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -376,6 +398,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_15` (
 
 
 -- 导出  表 db_hdb_core.points_payment_16 结构
+DROP TABLE IF EXISTS `points_payment_16`;
 CREATE TABLE IF NOT EXISTS `points_payment_16` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -395,6 +418,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_16` (
 
 
 -- 导出  表 db_hdb_core.points_payment_17 结构
+DROP TABLE IF EXISTS `points_payment_17`;
 CREATE TABLE IF NOT EXISTS `points_payment_17` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -414,6 +438,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_17` (
 
 
 -- 导出  表 db_hdb_core.points_payment_18 结构
+DROP TABLE IF EXISTS `points_payment_18`;
 CREATE TABLE IF NOT EXISTS `points_payment_18` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -433,6 +458,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_18` (
 
 
 -- 导出  表 db_hdb_core.points_payment_19 结构
+DROP TABLE IF EXISTS `points_payment_19`;
 CREATE TABLE IF NOT EXISTS `points_payment_19` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -452,6 +478,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_19` (
 
 
 -- 导出  表 db_hdb_core.points_payment_20 结构
+DROP TABLE IF EXISTS `points_payment_20`;
 CREATE TABLE IF NOT EXISTS `points_payment_20` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -471,6 +498,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_20` (
 
 
 -- 导出  表 db_hdb_core.points_payment_21 结构
+DROP TABLE IF EXISTS `points_payment_21`;
 CREATE TABLE IF NOT EXISTS `points_payment_21` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -490,6 +518,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_21` (
 
 
 -- 导出  表 db_hdb_core.points_payment_22 结构
+DROP TABLE IF EXISTS `points_payment_22`;
 CREATE TABLE IF NOT EXISTS `points_payment_22` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -509,6 +538,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_22` (
 
 
 -- 导出  表 db_hdb_core.points_payment_23 结构
+DROP TABLE IF EXISTS `points_payment_23`;
 CREATE TABLE IF NOT EXISTS `points_payment_23` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -528,6 +558,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_23` (
 
 
 -- 导出  表 db_hdb_core.points_payment_24 结构
+DROP TABLE IF EXISTS `points_payment_24`;
 CREATE TABLE IF NOT EXISTS `points_payment_24` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -547,6 +578,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_24` (
 
 
 -- 导出  表 db_hdb_core.points_payment_25 结构
+DROP TABLE IF EXISTS `points_payment_25`;
 CREATE TABLE IF NOT EXISTS `points_payment_25` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -566,6 +598,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_25` (
 
 
 -- 导出  表 db_hdb_core.points_payment_26 结构
+DROP TABLE IF EXISTS `points_payment_26`;
 CREATE TABLE IF NOT EXISTS `points_payment_26` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -585,6 +618,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_26` (
 
 
 -- 导出  表 db_hdb_core.points_payment_27 结构
+DROP TABLE IF EXISTS `points_payment_27`;
 CREATE TABLE IF NOT EXISTS `points_payment_27` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -604,6 +638,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_27` (
 
 
 -- 导出  表 db_hdb_core.points_payment_28 结构
+DROP TABLE IF EXISTS `points_payment_28`;
 CREATE TABLE IF NOT EXISTS `points_payment_28` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -623,6 +658,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_28` (
 
 
 -- 导出  表 db_hdb_core.points_payment_29 结构
+DROP TABLE IF EXISTS `points_payment_29`;
 CREATE TABLE IF NOT EXISTS `points_payment_29` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -642,6 +678,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_29` (
 
 
 -- 导出  表 db_hdb_core.points_payment_30 结构
+DROP TABLE IF EXISTS `points_payment_30`;
 CREATE TABLE IF NOT EXISTS `points_payment_30` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -661,6 +698,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_30` (
 
 
 -- 导出  表 db_hdb_core.points_payment_31 结构
+DROP TABLE IF EXISTS `points_payment_31`;
 CREATE TABLE IF NOT EXISTS `points_payment_31` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -680,6 +718,7 @@ CREATE TABLE IF NOT EXISTS `points_payment_31` (
 
 
 -- 导出  表 db_hdb_core.points_recv_00 结构
+DROP TABLE IF EXISTS `points_recv_00`;
 CREATE TABLE IF NOT EXISTS `points_recv_00` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -701,6 +740,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_00` (
 
 
 -- 导出  表 db_hdb_core.points_recv_01 结构
+DROP TABLE IF EXISTS `points_recv_01`;
 CREATE TABLE IF NOT EXISTS `points_recv_01` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -722,6 +762,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_01` (
 
 
 -- 导出  表 db_hdb_core.points_recv_02 结构
+DROP TABLE IF EXISTS `points_recv_02`;
 CREATE TABLE IF NOT EXISTS `points_recv_02` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -743,6 +784,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_02` (
 
 
 -- 导出  表 db_hdb_core.points_recv_03 结构
+DROP TABLE IF EXISTS `points_recv_03`;
 CREATE TABLE IF NOT EXISTS `points_recv_03` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -764,6 +806,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_03` (
 
 
 -- 导出  表 db_hdb_core.points_recv_04 结构
+DROP TABLE IF EXISTS `points_recv_04`;
 CREATE TABLE IF NOT EXISTS `points_recv_04` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -785,6 +828,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_04` (
 
 
 -- 导出  表 db_hdb_core.points_recv_05 结构
+DROP TABLE IF EXISTS `points_recv_05`;
 CREATE TABLE IF NOT EXISTS `points_recv_05` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -806,6 +850,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_05` (
 
 
 -- 导出  表 db_hdb_core.points_recv_06 结构
+DROP TABLE IF EXISTS `points_recv_06`;
 CREATE TABLE IF NOT EXISTS `points_recv_06` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -827,6 +872,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_06` (
 
 
 -- 导出  表 db_hdb_core.points_recv_07 结构
+DROP TABLE IF EXISTS `points_recv_07`;
 CREATE TABLE IF NOT EXISTS `points_recv_07` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -848,6 +894,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_07` (
 
 
 -- 导出  表 db_hdb_core.points_recv_08 结构
+DROP TABLE IF EXISTS `points_recv_08`;
 CREATE TABLE IF NOT EXISTS `points_recv_08` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -869,6 +916,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_08` (
 
 
 -- 导出  表 db_hdb_core.points_recv_09 结构
+DROP TABLE IF EXISTS `points_recv_09`;
 CREATE TABLE IF NOT EXISTS `points_recv_09` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -890,6 +938,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_09` (
 
 
 -- 导出  表 db_hdb_core.points_recv_10 结构
+DROP TABLE IF EXISTS `points_recv_10`;
 CREATE TABLE IF NOT EXISTS `points_recv_10` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -911,6 +960,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_10` (
 
 
 -- 导出  表 db_hdb_core.points_recv_11 结构
+DROP TABLE IF EXISTS `points_recv_11`;
 CREATE TABLE IF NOT EXISTS `points_recv_11` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -932,6 +982,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_11` (
 
 
 -- 导出  表 db_hdb_core.points_recv_12 结构
+DROP TABLE IF EXISTS `points_recv_12`;
 CREATE TABLE IF NOT EXISTS `points_recv_12` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -953,6 +1004,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_12` (
 
 
 -- 导出  表 db_hdb_core.points_recv_13 结构
+DROP TABLE IF EXISTS `points_recv_13`;
 CREATE TABLE IF NOT EXISTS `points_recv_13` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -974,6 +1026,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_13` (
 
 
 -- 导出  表 db_hdb_core.points_recv_14 结构
+DROP TABLE IF EXISTS `points_recv_14`;
 CREATE TABLE IF NOT EXISTS `points_recv_14` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -995,6 +1048,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_14` (
 
 
 -- 导出  表 db_hdb_core.points_recv_15 结构
+DROP TABLE IF EXISTS `points_recv_15`;
 CREATE TABLE IF NOT EXISTS `points_recv_15` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1016,6 +1070,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_15` (
 
 
 -- 导出  表 db_hdb_core.points_recv_16 结构
+DROP TABLE IF EXISTS `points_recv_16`;
 CREATE TABLE IF NOT EXISTS `points_recv_16` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1037,6 +1092,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_16` (
 
 
 -- 导出  表 db_hdb_core.points_recv_17 结构
+DROP TABLE IF EXISTS `points_recv_17`;
 CREATE TABLE IF NOT EXISTS `points_recv_17` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1058,6 +1114,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_17` (
 
 
 -- 导出  表 db_hdb_core.points_recv_18 结构
+DROP TABLE IF EXISTS `points_recv_18`;
 CREATE TABLE IF NOT EXISTS `points_recv_18` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1079,6 +1136,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_18` (
 
 
 -- 导出  表 db_hdb_core.points_recv_19 结构
+DROP TABLE IF EXISTS `points_recv_19`;
 CREATE TABLE IF NOT EXISTS `points_recv_19` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1100,6 +1158,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_19` (
 
 
 -- 导出  表 db_hdb_core.points_recv_20 结构
+DROP TABLE IF EXISTS `points_recv_20`;
 CREATE TABLE IF NOT EXISTS `points_recv_20` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1121,6 +1180,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_20` (
 
 
 -- 导出  表 db_hdb_core.points_recv_21 结构
+DROP TABLE IF EXISTS `points_recv_21`;
 CREATE TABLE IF NOT EXISTS `points_recv_21` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1142,6 +1202,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_21` (
 
 
 -- 导出  表 db_hdb_core.points_recv_22 结构
+DROP TABLE IF EXISTS `points_recv_22`;
 CREATE TABLE IF NOT EXISTS `points_recv_22` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1163,6 +1224,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_22` (
 
 
 -- 导出  表 db_hdb_core.points_recv_23 结构
+DROP TABLE IF EXISTS `points_recv_23`;
 CREATE TABLE IF NOT EXISTS `points_recv_23` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1184,6 +1246,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_23` (
 
 
 -- 导出  表 db_hdb_core.points_recv_24 结构
+DROP TABLE IF EXISTS `points_recv_24`;
 CREATE TABLE IF NOT EXISTS `points_recv_24` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1205,6 +1268,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_24` (
 
 
 -- 导出  表 db_hdb_core.points_recv_25 结构
+DROP TABLE IF EXISTS `points_recv_25`;
 CREATE TABLE IF NOT EXISTS `points_recv_25` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1226,6 +1290,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_25` (
 
 
 -- 导出  表 db_hdb_core.points_recv_26 结构
+DROP TABLE IF EXISTS `points_recv_26`;
 CREATE TABLE IF NOT EXISTS `points_recv_26` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1247,6 +1312,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_26` (
 
 
 -- 导出  表 db_hdb_core.points_recv_27 结构
+DROP TABLE IF EXISTS `points_recv_27`;
 CREATE TABLE IF NOT EXISTS `points_recv_27` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1268,6 +1334,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_27` (
 
 
 -- 导出  表 db_hdb_core.points_recv_28 结构
+DROP TABLE IF EXISTS `points_recv_28`;
 CREATE TABLE IF NOT EXISTS `points_recv_28` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1289,6 +1356,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_28` (
 
 
 -- 导出  表 db_hdb_core.points_recv_29 结构
+DROP TABLE IF EXISTS `points_recv_29`;
 CREATE TABLE IF NOT EXISTS `points_recv_29` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1310,6 +1378,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_29` (
 
 
 -- 导出  表 db_hdb_core.points_recv_30 结构
+DROP TABLE IF EXISTS `points_recv_30`;
 CREATE TABLE IF NOT EXISTS `points_recv_30` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1331,6 +1400,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_30` (
 
 
 -- 导出  表 db_hdb_core.points_recv_31 结构
+DROP TABLE IF EXISTS `points_recv_31`;
 CREATE TABLE IF NOT EXISTS `points_recv_31` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -1352,6 +1422,7 @@ CREATE TABLE IF NOT EXISTS `points_recv_31` (
 
 
 -- 导出  表 db_hdb_core.points_txn_00 结构
+DROP TABLE IF EXISTS `points_txn_00`;
 CREATE TABLE IF NOT EXISTS `points_txn_00` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1374,6 +1445,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_00` (
 
 
 -- 导出  表 db_hdb_core.points_txn_01 结构
+DROP TABLE IF EXISTS `points_txn_01`;
 CREATE TABLE IF NOT EXISTS `points_txn_01` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1396,6 +1468,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_01` (
 
 
 -- 导出  表 db_hdb_core.points_txn_02 结构
+DROP TABLE IF EXISTS `points_txn_02`;
 CREATE TABLE IF NOT EXISTS `points_txn_02` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1418,6 +1491,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_02` (
 
 
 -- 导出  表 db_hdb_core.points_txn_03 结构
+DROP TABLE IF EXISTS `points_txn_03`;
 CREATE TABLE IF NOT EXISTS `points_txn_03` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1440,6 +1514,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_03` (
 
 
 -- 导出  表 db_hdb_core.points_txn_04 结构
+DROP TABLE IF EXISTS `points_txn_04`;
 CREATE TABLE IF NOT EXISTS `points_txn_04` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1462,6 +1537,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_04` (
 
 
 -- 导出  表 db_hdb_core.points_txn_05 结构
+DROP TABLE IF EXISTS `points_txn_05`;
 CREATE TABLE IF NOT EXISTS `points_txn_05` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1484,6 +1560,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_05` (
 
 
 -- 导出  表 db_hdb_core.points_txn_06 结构
+DROP TABLE IF EXISTS `points_txn_06`;
 CREATE TABLE IF NOT EXISTS `points_txn_06` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1506,6 +1583,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_06` (
 
 
 -- 导出  表 db_hdb_core.points_txn_07 结构
+DROP TABLE IF EXISTS `points_txn_07`;
 CREATE TABLE IF NOT EXISTS `points_txn_07` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1528,6 +1606,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_07` (
 
 
 -- 导出  表 db_hdb_core.points_txn_08 结构
+DROP TABLE IF EXISTS `points_txn_08`;
 CREATE TABLE IF NOT EXISTS `points_txn_08` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1550,6 +1629,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_08` (
 
 
 -- 导出  表 db_hdb_core.points_txn_09 结构
+DROP TABLE IF EXISTS `points_txn_09`;
 CREATE TABLE IF NOT EXISTS `points_txn_09` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1572,6 +1652,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_09` (
 
 
 -- 导出  表 db_hdb_core.points_txn_10 结构
+DROP TABLE IF EXISTS `points_txn_10`;
 CREATE TABLE IF NOT EXISTS `points_txn_10` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1594,6 +1675,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_10` (
 
 
 -- 导出  表 db_hdb_core.points_txn_11 结构
+DROP TABLE IF EXISTS `points_txn_11`;
 CREATE TABLE IF NOT EXISTS `points_txn_11` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1616,6 +1698,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_11` (
 
 
 -- 导出  表 db_hdb_core.points_txn_12 结构
+DROP TABLE IF EXISTS `points_txn_12`;
 CREATE TABLE IF NOT EXISTS `points_txn_12` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1638,6 +1721,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_12` (
 
 
 -- 导出  表 db_hdb_core.points_txn_13 结构
+DROP TABLE IF EXISTS `points_txn_13`;
 CREATE TABLE IF NOT EXISTS `points_txn_13` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1660,6 +1744,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_13` (
 
 
 -- 导出  表 db_hdb_core.points_txn_14 结构
+DROP TABLE IF EXISTS `points_txn_14`;
 CREATE TABLE IF NOT EXISTS `points_txn_14` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1682,6 +1767,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_14` (
 
 
 -- 导出  表 db_hdb_core.points_txn_15 结构
+DROP TABLE IF EXISTS `points_txn_15`;
 CREATE TABLE IF NOT EXISTS `points_txn_15` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1704,6 +1790,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_15` (
 
 
 -- 导出  表 db_hdb_core.points_txn_16 结构
+DROP TABLE IF EXISTS `points_txn_16`;
 CREATE TABLE IF NOT EXISTS `points_txn_16` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1726,6 +1813,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_16` (
 
 
 -- 导出  表 db_hdb_core.points_txn_17 结构
+DROP TABLE IF EXISTS `points_txn_17`;
 CREATE TABLE IF NOT EXISTS `points_txn_17` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1748,6 +1836,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_17` (
 
 
 -- 导出  表 db_hdb_core.points_txn_18 结构
+DROP TABLE IF EXISTS `points_txn_18`;
 CREATE TABLE IF NOT EXISTS `points_txn_18` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1770,6 +1859,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_18` (
 
 
 -- 导出  表 db_hdb_core.points_txn_19 结构
+DROP TABLE IF EXISTS `points_txn_19`;
 CREATE TABLE IF NOT EXISTS `points_txn_19` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1792,6 +1882,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_19` (
 
 
 -- 导出  表 db_hdb_core.points_txn_20 结构
+DROP TABLE IF EXISTS `points_txn_20`;
 CREATE TABLE IF NOT EXISTS `points_txn_20` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1814,6 +1905,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_20` (
 
 
 -- 导出  表 db_hdb_core.points_txn_21 结构
+DROP TABLE IF EXISTS `points_txn_21`;
 CREATE TABLE IF NOT EXISTS `points_txn_21` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1836,6 +1928,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_21` (
 
 
 -- 导出  表 db_hdb_core.points_txn_22 结构
+DROP TABLE IF EXISTS `points_txn_22`;
 CREATE TABLE IF NOT EXISTS `points_txn_22` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1858,6 +1951,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_22` (
 
 
 -- 导出  表 db_hdb_core.points_txn_23 结构
+DROP TABLE IF EXISTS `points_txn_23`;
 CREATE TABLE IF NOT EXISTS `points_txn_23` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1880,6 +1974,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_23` (
 
 
 -- 导出  表 db_hdb_core.points_txn_24 结构
+DROP TABLE IF EXISTS `points_txn_24`;
 CREATE TABLE IF NOT EXISTS `points_txn_24` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1902,6 +1997,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_24` (
 
 
 -- 导出  表 db_hdb_core.points_txn_25 结构
+DROP TABLE IF EXISTS `points_txn_25`;
 CREATE TABLE IF NOT EXISTS `points_txn_25` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1924,6 +2020,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_25` (
 
 
 -- 导出  表 db_hdb_core.points_txn_26 结构
+DROP TABLE IF EXISTS `points_txn_26`;
 CREATE TABLE IF NOT EXISTS `points_txn_26` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1946,6 +2043,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_26` (
 
 
 -- 导出  表 db_hdb_core.points_txn_27 结构
+DROP TABLE IF EXISTS `points_txn_27`;
 CREATE TABLE IF NOT EXISTS `points_txn_27` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1968,6 +2066,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_27` (
 
 
 -- 导出  表 db_hdb_core.points_txn_28 结构
+DROP TABLE IF EXISTS `points_txn_28`;
 CREATE TABLE IF NOT EXISTS `points_txn_28` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -1990,6 +2089,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_28` (
 
 
 -- 导出  表 db_hdb_core.points_txn_29 结构
+DROP TABLE IF EXISTS `points_txn_29`;
 CREATE TABLE IF NOT EXISTS `points_txn_29` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -2012,6 +2112,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_29` (
 
 
 -- 导出  表 db_hdb_core.points_txn_30 结构
+DROP TABLE IF EXISTS `points_txn_30`;
 CREATE TABLE IF NOT EXISTS `points_txn_30` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -2034,6 +2135,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_30` (
 
 
 -- 导出  表 db_hdb_core.points_txn_31 结构
+DROP TABLE IF EXISTS `points_txn_31`;
 CREATE TABLE IF NOT EXISTS `points_txn_31` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水关联的交易ID',
@@ -2056,6 +2158,7 @@ CREATE TABLE IF NOT EXISTS `points_txn_31` (
 
 
 -- 导出  表 db_hdb_core.user_account_points 结构
+DROP TABLE IF EXISTS `user_account_points`;
 CREATE TABLE IF NOT EXISTS `user_account_points` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
@@ -2074,11 +2177,13 @@ CREATE TABLE IF NOT EXISTS `user_account_points` (
 
 
 -- 导出 db_hdb_ffactivity 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_ffactivity`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_ffactivity` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_ffactivity`;
 
 
 -- 导出  表 db_hdb_ffactivity.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -2087,6 +2192,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdb_ffactivity.ff_activity 结构
+DROP TABLE IF EXISTS `ff_activity`;
 CREATE TABLE IF NOT EXISTS `ff_activity` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ac_name` varchar(100) NOT NULL DEFAULT '' COMMENT '活动名',
@@ -2118,6 +2224,7 @@ CREATE TABLE IF NOT EXISTS `ff_activity` (
 
 
 -- 导出  表 db_hdb_ffactivity.ff_activity_old 结构
+DROP TABLE IF EXISTS `ff_activity_old`;
 CREATE TABLE IF NOT EXISTS `ff_activity_old` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `partner_id` int(10) unsigned DEFAULT '0' COMMENT '合作伙伴id',
@@ -2149,6 +2256,7 @@ CREATE TABLE IF NOT EXISTS `ff_activity_old` (
 
 
 -- 导出  表 db_hdb_ffactivity.ff_partner 结构
+DROP TABLE IF EXISTS `ff_partner`;
 CREATE TABLE IF NOT EXISTS `ff_partner` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `name` varchar(64) NOT NULL DEFAULT '0' COMMENT '合作伙伴名字',
@@ -2163,11 +2271,13 @@ CREATE TABLE IF NOT EXISTS `ff_partner` (
 
 
 -- 导出 db_hdb_indiana 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_indiana`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_indiana` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `db_hdb_indiana`;
 
 
 -- 导出  表 db_hdb_indiana.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -2176,6 +2286,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdb_indiana.indiana_activity 结构
+DROP TABLE IF EXISTS `indiana_activity`;
 CREATE TABLE IF NOT EXISTS `indiana_activity` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `sequence` int(10) unsigned NOT NULL COMMENT '活动期数',
@@ -2202,6 +2313,7 @@ CREATE TABLE IF NOT EXISTS `indiana_activity` (
 
 
 -- 导出  表 db_hdb_indiana.indiana_activity_group 结构
+DROP TABLE IF EXISTS `indiana_activity_group`;
 CREATE TABLE IF NOT EXISTS `indiana_activity_group` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `title` varchar(256) NOT NULL COMMENT '活动标题',
@@ -2225,6 +2337,7 @@ CREATE TABLE IF NOT EXISTS `indiana_activity_group` (
 
 
 -- 导出  表 db_hdb_indiana.indiana_last_random_seed 结构
+DROP TABLE IF EXISTS `indiana_last_random_seed`;
 CREATE TABLE IF NOT EXISTS `indiana_last_random_seed` (
   `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
   `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
@@ -2238,6 +2351,7 @@ CREATE TABLE IF NOT EXISTS `indiana_last_random_seed` (
 
 
 -- 导出  表 db_hdb_indiana.indiana_number_pool 结构
+DROP TABLE IF EXISTS `indiana_number_pool`;
 CREATE TABLE IF NOT EXISTS `indiana_number_pool` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `activity_id` bigint(20) unsigned NOT NULL COMMENT '奖品id',
@@ -2252,6 +2366,7 @@ CREATE TABLE IF NOT EXISTS `indiana_number_pool` (
 
 
 -- 导出  表 db_hdb_indiana.indiana_order 结构
+DROP TABLE IF EXISTS `indiana_order`;
 CREATE TABLE IF NOT EXISTS `indiana_order` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
@@ -2276,6 +2391,7 @@ CREATE TABLE IF NOT EXISTS `indiana_order` (
 
 
 -- 导出  表 db_hdb_indiana.indiana_order_item 结构
+DROP TABLE IF EXISTS `indiana_order_item`;
 CREATE TABLE IF NOT EXISTS `indiana_order_item` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
@@ -2292,11 +2408,13 @@ CREATE TABLE IF NOT EXISTS `indiana_order_item` (
 
 
 -- 导出 db_hdb_mall 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_mall`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_mall` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_mall`;
 
 
 -- 导出  表 db_hdb_mall.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -2305,6 +2423,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdb_mall.inventory 结构
+DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE IF NOT EXISTS `inventory` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` bigint(20) unsigned NOT NULL DEFAULT '100001',
@@ -2322,6 +2441,7 @@ CREATE TABLE IF NOT EXISTS `inventory` (
 
 
 -- 导出  表 db_hdb_mall.inventory_detail 结构
+DROP TABLE IF EXISTS `inventory_detail`;
 CREATE TABLE IF NOT EXISTS `inventory_detail` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `item_id` bigint(20) NOT NULL DEFAULT '100001',
@@ -2338,6 +2458,7 @@ CREATE TABLE IF NOT EXISTS `inventory_detail` (
 
 
 -- 导出  表 db_hdb_mall.inventory_inreserve 结构
+DROP TABLE IF EXISTS `inventory_inreserve`;
 CREATE TABLE IF NOT EXISTS `inventory_inreserve` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `reserved_id` varchar(128) NOT NULL DEFAULT '0',
@@ -2350,6 +2471,7 @@ CREATE TABLE IF NOT EXISTS `inventory_inreserve` (
 
 
 -- 导出  表 db_hdb_mall.item 结构
+DROP TABLE IF EXISTS `item`;
 CREATE TABLE IF NOT EXISTS `item` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `org_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '组织ID',
@@ -2372,6 +2494,7 @@ CREATE TABLE IF NOT EXISTS `item` (
 
 
 -- 导出  表 db_hdb_mall.item_attribute 结构
+DROP TABLE IF EXISTS `item_attribute`;
 CREATE TABLE IF NOT EXISTS `item_attribute` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `item_id` bigint(20) NOT NULL DEFAULT '0' COMMENT 'item ID',
@@ -2391,6 +2514,7 @@ CREATE TABLE IF NOT EXISTS `item_attribute` (
 
 
 -- 导出  表 db_hdb_mall.item_image 结构
+DROP TABLE IF EXISTS `item_image`;
 CREATE TABLE IF NOT EXISTS `item_image` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `item_id` bigint(20) NOT NULL DEFAULT '0' COMMENT 'item ID',
@@ -2407,6 +2531,7 @@ CREATE TABLE IF NOT EXISTS `item_image` (
 
 
 -- 导出  表 db_hdb_mall.item_price 结构
+DROP TABLE IF EXISTS `item_price`;
 CREATE TABLE IF NOT EXISTS `item_price` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `item_id` bigint(20) NOT NULL DEFAULT '0' COMMENT 'item ID',
@@ -2424,6 +2549,7 @@ CREATE TABLE IF NOT EXISTS `item_price` (
 
 
 -- 导出  表 db_hdb_mall.orders 结构
+DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '订单表id',
   `order_id` varchar(64) NOT NULL DEFAULT '' COMMENT '订单自定义id',
@@ -2450,6 +2576,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
 
 
 -- 导出  表 db_hdb_mall.order_item 结构
+DROP TABLE IF EXISTS `order_item`;
 CREATE TABLE IF NOT EXISTS `order_item` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '订单子项id',
   `item_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '商品id',
@@ -2472,6 +2599,7 @@ CREATE TABLE IF NOT EXISTS `order_item` (
 
 
 -- 导出  表 db_hdb_mall.order_payment 结构
+DROP TABLE IF EXISTS `order_payment`;
 CREATE TABLE IF NOT EXISTS `order_payment` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '支付id，自增',
   `order_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '订单id',
@@ -2487,25 +2615,14 @@ CREATE TABLE IF NOT EXISTS `order_payment` (
 -- 数据导出被取消选择。
 
 
--- 导出  表 db_hdb_mall.upload_detail 结构
-CREATE TABLE IF NOT EXISTS `upload_detail` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `statu` varchar(2) NOT NULL,
-  `amount` int(10) NOT NULL,
-  `date_time` datetime NOT NULL,
-  `source` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- 数据导出被取消选择。
-
-
 -- 导出 db_hdb_passport 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_passport`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_passport` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_passport`;
 
 
 -- 导出  表 db_hdb_passport.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -2514,6 +2631,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_1 结构
+DROP TABLE IF EXISTS `passport_user_1`;
 CREATE TABLE IF NOT EXISTS `passport_user_1` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2528,6 +2646,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_1` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_10 结构
+DROP TABLE IF EXISTS `passport_user_10`;
 CREATE TABLE IF NOT EXISTS `passport_user_10` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2542,6 +2661,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_10` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_11 结构
+DROP TABLE IF EXISTS `passport_user_11`;
 CREATE TABLE IF NOT EXISTS `passport_user_11` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2556,6 +2676,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_11` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_12 结构
+DROP TABLE IF EXISTS `passport_user_12`;
 CREATE TABLE IF NOT EXISTS `passport_user_12` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2570,6 +2691,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_12` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_13 结构
+DROP TABLE IF EXISTS `passport_user_13`;
 CREATE TABLE IF NOT EXISTS `passport_user_13` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2584,6 +2706,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_13` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_14 结构
+DROP TABLE IF EXISTS `passport_user_14`;
 CREATE TABLE IF NOT EXISTS `passport_user_14` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2598,6 +2721,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_14` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_15 结构
+DROP TABLE IF EXISTS `passport_user_15`;
 CREATE TABLE IF NOT EXISTS `passport_user_15` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2612,6 +2736,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_15` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_16 结构
+DROP TABLE IF EXISTS `passport_user_16`;
 CREATE TABLE IF NOT EXISTS `passport_user_16` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2626,6 +2751,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_16` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_17 结构
+DROP TABLE IF EXISTS `passport_user_17`;
 CREATE TABLE IF NOT EXISTS `passport_user_17` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2640,6 +2766,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_17` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_18 结构
+DROP TABLE IF EXISTS `passport_user_18`;
 CREATE TABLE IF NOT EXISTS `passport_user_18` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2654,6 +2781,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_18` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_19 结构
+DROP TABLE IF EXISTS `passport_user_19`;
 CREATE TABLE IF NOT EXISTS `passport_user_19` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2668,6 +2796,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_19` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_2 结构
+DROP TABLE IF EXISTS `passport_user_2`;
 CREATE TABLE IF NOT EXISTS `passport_user_2` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2682,6 +2811,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_2` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_20 结构
+DROP TABLE IF EXISTS `passport_user_20`;
 CREATE TABLE IF NOT EXISTS `passport_user_20` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2696,6 +2826,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_20` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_21 结构
+DROP TABLE IF EXISTS `passport_user_21`;
 CREATE TABLE IF NOT EXISTS `passport_user_21` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2710,6 +2841,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_21` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_22 结构
+DROP TABLE IF EXISTS `passport_user_22`;
 CREATE TABLE IF NOT EXISTS `passport_user_22` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2724,6 +2856,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_22` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_23 结构
+DROP TABLE IF EXISTS `passport_user_23`;
 CREATE TABLE IF NOT EXISTS `passport_user_23` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2738,6 +2871,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_23` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_24 结构
+DROP TABLE IF EXISTS `passport_user_24`;
 CREATE TABLE IF NOT EXISTS `passport_user_24` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2752,6 +2886,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_24` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_25 结构
+DROP TABLE IF EXISTS `passport_user_25`;
 CREATE TABLE IF NOT EXISTS `passport_user_25` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2766,6 +2901,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_25` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_26 结构
+DROP TABLE IF EXISTS `passport_user_26`;
 CREATE TABLE IF NOT EXISTS `passport_user_26` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2780,6 +2916,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_26` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_27 结构
+DROP TABLE IF EXISTS `passport_user_27`;
 CREATE TABLE IF NOT EXISTS `passport_user_27` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2794,6 +2931,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_27` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_28 结构
+DROP TABLE IF EXISTS `passport_user_28`;
 CREATE TABLE IF NOT EXISTS `passport_user_28` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2808,6 +2946,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_28` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_29 结构
+DROP TABLE IF EXISTS `passport_user_29`;
 CREATE TABLE IF NOT EXISTS `passport_user_29` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2822,6 +2961,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_29` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_3 结构
+DROP TABLE IF EXISTS `passport_user_3`;
 CREATE TABLE IF NOT EXISTS `passport_user_3` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2836,6 +2976,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_3` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_30 结构
+DROP TABLE IF EXISTS `passport_user_30`;
 CREATE TABLE IF NOT EXISTS `passport_user_30` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2850,6 +2991,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_30` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_31 结构
+DROP TABLE IF EXISTS `passport_user_31`;
 CREATE TABLE IF NOT EXISTS `passport_user_31` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2864,6 +3006,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_31` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_32 结构
+DROP TABLE IF EXISTS `passport_user_32`;
 CREATE TABLE IF NOT EXISTS `passport_user_32` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2878,6 +3021,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_32` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_4 结构
+DROP TABLE IF EXISTS `passport_user_4`;
 CREATE TABLE IF NOT EXISTS `passport_user_4` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2892,6 +3036,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_4` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_5 结构
+DROP TABLE IF EXISTS `passport_user_5`;
 CREATE TABLE IF NOT EXISTS `passport_user_5` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2906,6 +3051,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_5` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_6 结构
+DROP TABLE IF EXISTS `passport_user_6`;
 CREATE TABLE IF NOT EXISTS `passport_user_6` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2920,6 +3066,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_6` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_7 结构
+DROP TABLE IF EXISTS `passport_user_7`;
 CREATE TABLE IF NOT EXISTS `passport_user_7` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2934,6 +3081,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_7` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_8 结构
+DROP TABLE IF EXISTS `passport_user_8`;
 CREATE TABLE IF NOT EXISTS `passport_user_8` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2948,6 +3096,7 @@ CREATE TABLE IF NOT EXISTS `passport_user_8` (
 
 
 -- 导出  表 db_hdb_passport.passport_user_9 结构
+DROP TABLE IF EXISTS `passport_user_9`;
 CREATE TABLE IF NOT EXISTS `passport_user_9` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(36) NOT NULL DEFAULT '' COMMENT '用户登录名',
@@ -2962,11 +3111,13 @@ CREATE TABLE IF NOT EXISTS `passport_user_9` (
 
 
 -- 导出 db_hdb_qrf 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_qrf`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_qrf` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_qrf`;
 
 
 -- 导出  表 db_hdb_qrf.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -2975,6 +3126,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdb_qrf.dubbo_invoke 结构
+DROP TABLE IF EXISTS `dubbo_invoke`;
 CREATE TABLE IF NOT EXISTS `dubbo_invoke` (
   `id` varchar(255) NOT NULL DEFAULT '',
   `invoke_date` date NOT NULL,
@@ -2999,6 +3151,7 @@ CREATE TABLE IF NOT EXISTS `dubbo_invoke` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_code 结构
+DROP TABLE IF EXISTS `qrf_code`;
 CREATE TABLE IF NOT EXISTS `qrf_code` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `code` varchar(255) NOT NULL DEFAULT '0' COMMENT '活动码',
@@ -3014,6 +3167,7 @@ CREATE TABLE IF NOT EXISTS `qrf_code` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_00 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_00`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_00` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3034,6 +3188,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_00` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_01 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_01`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_01` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3054,6 +3209,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_01` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_02 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_02`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_02` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3074,6 +3230,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_02` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_03 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_03`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_03` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3094,6 +3251,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_03` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_04 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_04`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_04` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3114,6 +3272,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_04` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_05 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_05`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_05` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3134,6 +3293,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_05` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_06 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_06`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_06` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3154,6 +3314,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_06` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_07 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_07`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_07` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3174,6 +3335,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_07` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_08 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_08`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_08` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3194,6 +3356,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_08` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_09 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_09`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_09` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3214,6 +3377,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_09` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_10 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_10`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_10` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3234,6 +3398,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_10` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_11 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_11`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_11` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3254,6 +3419,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_11` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_12 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_12`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_12` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3274,6 +3440,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_12` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_13 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_13`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_13` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3294,6 +3461,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_13` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_14 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_14`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_14` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3314,6 +3482,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_14` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_15 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_15`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_15` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3334,6 +3503,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_15` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_16 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_16`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_16` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3354,6 +3524,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_16` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_17 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_17`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_17` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3374,6 +3545,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_17` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_18 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_18`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_18` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3394,6 +3566,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_18` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_19 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_19`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_19` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3414,6 +3587,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_19` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_20 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_20`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_20` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3434,6 +3608,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_20` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_21 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_21`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_21` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3454,6 +3629,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_21` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_22 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_22`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_22` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3474,6 +3650,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_22` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_23 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_23`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_23` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3494,6 +3671,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_23` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_24 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_24`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_24` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3514,6 +3692,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_24` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_25 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_25`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_25` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3534,6 +3713,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_25` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_26 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_26`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_26` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3554,6 +3734,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_26` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_27 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_27`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_27` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3574,6 +3755,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_27` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_28 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_28`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_28` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3594,6 +3776,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_28` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_29 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_29`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_29` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3614,6 +3797,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_29` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_30 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_30`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_30` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3634,6 +3818,7 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_30` (
 
 
 -- 导出  表 db_hdb_qrf.qrf_scan_transaction_31 结构
+DROP TABLE IF EXISTS `qrf_scan_transaction_31`;
 CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_31` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `promotion_id` int(11) NOT NULL DEFAULT '0' COMMENT '活动id',
@@ -3654,11 +3839,13 @@ CREATE TABLE IF NOT EXISTS `qrf_scan_transaction_31` (
 
 
 -- 导出 db_hdb_uc 的数据库结构
+DROP DATABASE IF EXISTS `db_hdb_uc`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_uc` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_uc`;
 
 
 -- 导出  表 db_hdb_uc.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3667,6 +3854,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdb_uc.sys_areas 结构
+DROP TABLE IF EXISTS `sys_areas`;
 CREATE TABLE IF NOT EXISTS `sys_areas` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `city_code` varchar(6) NOT NULL DEFAULT '--' COMMENT '市编码',
@@ -3682,6 +3870,7 @@ CREATE TABLE IF NOT EXISTS `sys_areas` (
 
 
 -- 导出  表 db_hdb_uc.sys_cities 结构
+DROP TABLE IF EXISTS `sys_cities`;
 CREATE TABLE IF NOT EXISTS `sys_cities` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `province_code` varchar(6) NOT NULL DEFAULT '--' COMMENT '省编码',
@@ -3697,6 +3886,7 @@ CREATE TABLE IF NOT EXISTS `sys_cities` (
 
 
 -- 导出  表 db_hdb_uc.sys_provinces 结构
+DROP TABLE IF EXISTS `sys_provinces`;
 CREATE TABLE IF NOT EXISTS `sys_provinces` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键编号',
   `province_code` varchar(6) NOT NULL DEFAULT '--' COMMENT '省编码',
@@ -3711,6 +3901,7 @@ CREATE TABLE IF NOT EXISTS `sys_provinces` (
 
 
 -- 导出  表 db_hdb_uc.user_address 结构
+DROP TABLE IF EXISTS `user_address`;
 CREATE TABLE IF NOT EXISTS `user_address` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `address_code` varchar(32) NOT NULL DEFAULT '--' COMMENT '地址编号',
@@ -3738,11 +3929,13 @@ CREATE TABLE IF NOT EXISTS `user_address` (
 
 
 -- 导出 db_hdi_auth 的数据库结构
+DROP DATABASE IF EXISTS `db_hdi_auth`;
 CREATE DATABASE IF NOT EXISTS `db_hdi_auth` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdi_auth`;
 
 
 -- 导出  表 db_hdi_auth.conn_test 结构
+DROP TABLE IF EXISTS `conn_test`;
 CREATE TABLE IF NOT EXISTS `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -3751,6 +3944,7 @@ CREATE TABLE IF NOT EXISTS `conn_test` (
 
 
 -- 导出  表 db_hdi_auth.permission 结构
+DROP TABLE IF EXISTS `permission`;
 CREATE TABLE IF NOT EXISTS `permission` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `tenant_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '产品线ID',
@@ -3767,6 +3961,7 @@ CREATE TABLE IF NOT EXISTS `permission` (
 
 
 -- 导出  表 db_hdi_auth.role 结构
+DROP TABLE IF EXISTS `role`;
 CREATE TABLE IF NOT EXISTS `role` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `tenant_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '产品线ID',
@@ -3783,6 +3978,7 @@ CREATE TABLE IF NOT EXISTS `role` (
 
 
 -- 导出  表 db_hdi_auth.role_permission 结构
+DROP TABLE IF EXISTS `role_permission`;
 CREATE TABLE IF NOT EXISTS `role_permission` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `role_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '角色ID',
@@ -3798,6 +3994,7 @@ CREATE TABLE IF NOT EXISTS `role_permission` (
 
 
 -- 导出  表 db_hdi_auth.tenant 结构
+DROP TABLE IF EXISTS `tenant`;
 CREATE TABLE IF NOT EXISTS `tenant` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `name` varchar(128) NOT NULL DEFAULT '' COMMENT '产品线名',
@@ -3813,6 +4010,7 @@ CREATE TABLE IF NOT EXISTS `tenant` (
 
 
 -- 导出  表 db_hdi_auth.user 结构
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `username` varchar(128) NOT NULL DEFAULT '' COMMENT '用户名',
@@ -3829,6 +4027,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 
 -- 导出  表 db_hdi_auth.user_role 结构
+DROP TABLE IF EXISTS `user_role`;
 CREATE TABLE IF NOT EXISTS `user_role` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `user_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户ID',
