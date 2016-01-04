@@ -12,12 +12,16 @@ def HttpPost(url, header, data):
     response,content = h.request(url, 'POST', data, header)
     return response.status,content
 
+def HttpPatch(url, header, data):
+    h = httplib2.Http('.cache')
+    response,content = h.request(url, 'PATCH', data, header)
+    return response.status,content
+
 def err(msg):
     print msg
     sys.exit(1)
 
 def CreateItem(url, path):
-    print path
     file = open(path)
     try:
         data = file.read()
@@ -25,23 +29,20 @@ def CreateItem(url, path):
         file.close()
     status,content = HttpPost(url, restHeaders, data)
     if status != 200:
-        err("http request err while create item!")
+        err("http request err while create item! %s" % (data))
     resp = json.loads(content)
     if resp['code'] != 20000:
         err("failed to create item " + data)
-    print "Success to create new item"
-    return resp['result'],json.loads(data)['item']['orgId']
+    print "Success to create new item " + str(resp['result'])
+    return resp['result']
 
 def GetContentType(filepath):
     return mimetypes.guess_type(filepath)[0] or 'application/octet-stream'
 
 def EncodeMultipartFormdata(fields, files=[]):
-    print fields, files
     BOUNDARY = mimetools.choose_boundary()
     CRLF = '\r\n'
     L = []
-
-    print BOUNDARY
 
     for key in fields:
         L.append('--' + BOUNDARY)
@@ -71,31 +72,50 @@ def OnlineItem(url, itemId):
         ]
     }
     ''' % (itemId)
-    status,content = HttpPost(url, restHeaders, data)
+    status,content = HttpPatch(url, restHeaders, data)
     if status != 200:
         print content
         err("http request err while online item!")
     resp = json.loads(content)
     if resp['code'] != 20000:
         err("failed to online item " + data)
+    print "Success to online new item"
 
-def Instock(url, path, itemId, orgId):
-    fields={"item_id": itemId, "org_id": orgId}
+def Instock(url, path, orgId, itemId):
+    if os.path.getsize(path) == 0:
+        return
+    fields={"item_id": str(itemId), "org_id": str(orgId)}
     files ={"file": path}
     content_type,body=EncodeMultipartFormdata(fields, files)
     multipartHeader={"Content-type":content_type}
     status,content = HttpPost(url, multipartHeader, body)
     if status != 200:
-        print content
-        err("http request err while create instock!")
+        err("http request err while create instock!" + str(status) )
     resp = json.loads(content)
     if resp['code'] != 20000:
-        err("Failed to create instock " + body)
-        print "Success to create new instock"
+        err("Failed to create instock " + str(resp['code']) )
+    print "Success to create new instock"
+
+def InitItemInventory(url, basepath, orgId, idx):
+    instockUrl = '''%s/hdb/admin/inventorys''' % (url)
+    itemOnlineUrl = '''%s/hdb/admin/items''' % (url)
+    itemCreateUrl = '''%s/hdb/admin/items''' % (url)
+    itemTemplate = '''%s/items/%s/%s''' % (basepath, orgId, idx)
+    inventoryTemplate = '''%s/inventorys/%s/%s''' % (basepath, orgId, idx)
+    itemId = CreateItem(itemCreateUrl, itemTemplate)
+    OnlineItem(itemOnlineUrl, itemId)
+    Instock(instockUrl, inventoryTemplate, orgId, itemId)
 
 def Usage():
-    print "api_endpoint basepath index"
+    print "api_endpoint basepath orgId index"
 
 if __name__ == "__main__":
-    OnlineItem(sys.argv[1], sys.argv[2])
+    if len(sys.argv) != 5:
+        Usage()
+        sys.exit(1)
+    url = sys.argv[1]
+    basepath =sys.argv[2]
+    orgId = sys.argv[3]
+    idx= sys.argv[4]
+    InitItemInventory(url, basepath, orgId, idx)
 #HttpPost("http://120.26.192.100/hdb/admin/items", data)

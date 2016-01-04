@@ -20,7 +20,8 @@ check_err "which mysql" "Add mysql client to PATH first"
 
 MYSQL_CMD=`which mysql`
 
+PYTHON_CMD=`which python`
 
 HDB_SQL_FILE=hdb.sql
 
-HDB_ADMIN_URL=http://192.168.5.197
+HDB_ADMIN_URL=http://120.26.192.100
