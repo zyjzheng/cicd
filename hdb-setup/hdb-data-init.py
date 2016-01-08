@@ -30,15 +30,79 @@ ITEM_TEMPLATE='''{
 }
 '''
 
+FF_TEMPLATE='''
+{
+    "name":"%s",
+    "notes":"%s",
+    "type":"%s",
+    "beginTime":"%s",
+    "finishTime":"%s",
+    "maxPoints":%d,
+    "minPoints":%d,
+    "avgPoints":%d,
+    "pointsExpireYear":%d,
+    "pointsExpireMonth":%d,
+    "partnerId":"%s",
+    "productId":"%s"
+}
+'''
+
+
 ORGS={"2":"大众点评", "1":"UBER", "3":"格瓦拉"}
 LISTPRICES=[0,1,3,5,9,10,12,15,20,30,50,65,99,107,130,163,170,200,300,500,800,1000,2000]
 POINTPRICES=[0,1,5,10,50,99,100,150,200,263,500,555,839,1000,2010,3340,5000,9999,11000,200000,500000,1000000]
 INVENTORY=[0,1,6,10,50,100,300,500,1000,99999,150000,150000,99999,1000,500,300,100,50,10,6,1,0]
 
+FFS=[
+    {
+        "name":"恒大冰泉发分活动0",
+        "notes":"恒大冰泉扫码抽分活动0",
+        "type":"FFAC|M|YXQM",
+        "beginTime":"2016-01-01 00:00:00",
+        "finishTime":"2016-02-01 00:00:00",
+        "maxPoints":100,
+        "minPoints":10,
+        "avgPoints":30,
+        "pointsExpireYear":2016,
+        "pointsExpireMonth":10,
+        "partnerId":"0",
+        "productId":"BQ100001"
+    },
+    {
+        "name":"恒大冰泉发分活动1",
+        "notes":"恒大冰泉扫码抽分活动1",
+        "type":"FFAC|S|YWYM",
+        "beginTime":"2016-01-01 00:00:00",
+        "finishTime":"2016-02-01 00:00:00",
+        "maxPoints":100,
+        "minPoints":10,
+        "avgPoints":30,
+        "pointsExpireYear":2016,
+        "pointsExpireMonth":10,
+        "partnerId":"0",
+        "productId":"BQ100001"
+    },
+    {
+        "name":"恒大冰泉发分活动2",
+        "notes":"恒大冰泉扫码抽分活动2",
+        "type":"FFAC|M|YXQM",
+        "beginTime":"2016-01-01 00:00:00",
+        "finishTime":"2016-02-01 00:00:00",
+        "maxPoints":100,
+        "minPoints":10,
+        "avgPoints":30,
+        "pointsExpireYear":2016,
+        "pointsExpireMonth":10,
+        "partnerId":"0",
+        "productId":"BQ100001"
+    }
+]
+
 def Init(path):
     os.mkdir(path)
     os.mkdir(path+"/"+"items")
     os.mkdir(path+"/"+"inventorys")
+    os.mkdir(path+"/"+"ffs")
     for id in ORGS:
         os.mkdir(path+"/"+"items/"+str(id))
         os.mkdir(path+"/"+"inventorys/" + str(id))
@@ -61,6 +125,14 @@ def GenerateInventory(idx, path, orgId):
     for inv in range(INVENTORY[inventoryIdx]):
         fp.write(str(orgId) + "-" + string.join(random.sample('01234567899876543210',16)).replace(' ','') + '\n')
 
+def GenerateFF(idx, path):
+    ff=FFS[idx]
+    fp = open(path+"/ffs/" + str(idx), 'w')
+    ffstring = FF_TEMPLATE % (ff['name'], ff['notes'], ff['type'], ff['beginTime'], ff['finishTime'],
+                              ff['maxPoints'], ff['minPoints'], ff['avgPoints'], ff['pointsExpireYear'],
+                              ff['pointsExpireMonth'], ff['partnerId'], ff['productId'])
+    fp.write(ffstring)
+
 def do(path):
     for id in ORGS:
         idx = 0
@@ -68,6 +140,10 @@ def do(path):
             GenerateItem(idx, path, id)
             GenerateInventory(idx, path, id)
             idx = idx + 1
+    idx=0
+    for ff in FFS:
+        GenerateFF(idx, path)
+        idx = idx + 1
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

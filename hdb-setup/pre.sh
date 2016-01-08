@@ -3,12 +3,20 @@ ROOT_DIR=$(cd "$(dirname "$0")";pwd)
 
 . $ROOT_DIR/hdb.rc
 
+import_mysql(){
+    cat $1 | $MYSQL_CMD -h$MYSQL_HOST -u$MYSQL_USERNAME -p$MYSQL_PASSWORD
+}
+
 init_mysql() {
-  cat $ROOT_DIR/$HDB_SQL_FILE |  $MYSQL_CMD -h$MYSQL_HOST -u$MYSQL_USERNAME -p$MYSQL_PASSWORD
+    DDLPATH=$ROOT_DIR/ddl
+    for ddl in `ls $DDLPATH`; do
+        log "Import database schema $ddl"
+        check_err "import_mysql $DDLPATH/$ddl"  "Failed to import dataschema $ddl"
+    done
 }
 
 init_data() {
-  python $ROOT_DIR/hdb-data-init.py $ROOT_DIR/files
+    python $ROOT_DIR/hdb-data-init.py $ROOT_DIR/files
 }
 
 

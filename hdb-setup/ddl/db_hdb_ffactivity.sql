@@ -1,0 +1,51 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 恒大微分平台【DEV】
+Source Server Version : 50709
+Source Host           : 120.26.192.100:3306
+Source Database       : db_hdb_ffactivity
+
+Target Server Type    : MYSQL
+Target Server Version : 50709
+File Encoding         : 65001
+
+Date: 2016-01-05 13:41:48
+*/
+
+DROP DATABASE IF EXISTS `db_hdb_ffactivity`;
+CREATE DATABASE IF NOT EXISTS `db_hdb_ffactivity` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `db_hdb_ffactivity`;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for ff_activity
+-- ----------------------------
+DROP TABLE IF EXISTS `ff_activity`;
+CREATE TABLE `ff_activity` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ac_name` varchar(100) NOT NULL DEFAULT '' COMMENT '活动名',
+  `ac_desc` varchar(2000) NOT NULL DEFAULT '' COMMENT '活动描述',
+  `ac_type` varchar(20) NOT NULL DEFAULT '' COMMENT '活动类型:一物一码（FFAC|S|YWYM）有效期活动码(FFAC|M|YXQM)',
+  `ac_code` varchar(100) NOT NULL DEFAULT '' COMMENT '活动编码',
+  `ac_status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '活动状态 0-未开始 1-进行中 2-已结束',
+  `begin_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '活动开始时间',
+  `finish_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '活动结束时间',
+  `max_points` int(11) NOT NULL DEFAULT '0' COMMENT '积分最大值',
+  `min_points` int(11) NOT NULL DEFAULT '0' COMMENT '积分最小值',
+  `avg_points` int(11) NOT NULL DEFAULT '0' COMMENT '积分平均值',
+  `points_expire_date` date NOT NULL DEFAULT '2999-01-01' COMMENT '积分过期日期',
+  `total_gen_points` int(11) NOT NULL DEFAULT '0' COMMENT '已产生的积分总数',
+  `partner_id` varchar(50) NOT NULL DEFAULT '' COMMENT '合作伙伴编号',
+  `product_id` varchar(500) NOT NULL DEFAULT '' COMMENT '产品编号',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '活动创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '活动更新时间',
+  `terminate_time` datetime NOT NULL DEFAULT '1000-01-01 00:00:00' COMMENT '下线时间',
+  `create_user` varchar(50) NOT NULL DEFAULT '' COMMENT '活动创建人',
+  `update_user` varchar(50) NOT NULL DEFAULT '' COMMENT '活动更新人',
+  `terminate_user` varchar(255) NOT NULL DEFAULT '' COMMENT '下线用户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志 1-已删除 0-未删除',
+  PRIMARY KEY (`id`),
+  KEY `udx_activity_code` (`ac_code`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
