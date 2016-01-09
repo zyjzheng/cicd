@@ -32,7 +32,7 @@ def CreateFF(url, path):
         err("http request err while create ff! %s" % (content))
     resp = json.loads(content)
     if resp['code'] != 20000:
-        err("failed to create ff " + data)
+        err("failed to create ff " + content)
 
 def Usage():
     print 'cmd url, basepath, idx'
@@ -40,6 +40,6 @@ def Usage():
 if __name__ == '__main__':
     if len(sys.argv) != 4:
         Usage()
-    FFURL='''%s/hdb/admin/ffactivities''' % (sys.argv[1])
+    FFURL='''%s/ffactivities''' % (sys.argv[1])
     FF_TEMPLATE='''%s/ffs/%s''' % (sys.argv[2], sys.argv[3])
     CreateFF(FFURL, FF_TEMPLATE)

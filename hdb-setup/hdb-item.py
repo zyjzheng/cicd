@@ -97,9 +97,9 @@ def Instock(url, path, orgId, itemId):
     print "Success to create new instock"
 
 def InitItemInventory(url, basepath, orgId, idx):
-    instockUrl = '''%s/hdb/admin/inventorys''' % (url)
-    itemOnlineUrl = '''%s/hdb/admin/items''' % (url)
-    itemCreateUrl = '''%s/hdb/admin/items''' % (url)
+    instockUrl = '''%s/inventorys''' % (url)
+    itemOnlineUrl = '''%s/items''' % (url)
+    itemCreateUrl = '''%s/items''' % (url)
     itemTemplate = '''%s/items/%s/%s''' % (basepath, orgId, idx)
     inventoryTemplate = '''%s/inventorys/%s/%s''' % (basepath, orgId, idx)
     itemId = CreateItem(itemCreateUrl, itemTemplate)

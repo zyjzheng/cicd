@@ -40,6 +40,7 @@ FF_TEMPLATE='''
     "maxPoints":%d,
     "minPoints":%d,
     "avgPoints":%d,
+    "ffCount":"100000",
     "pointsExpireYear":%d,
     "pointsExpireMonth":%d,
     "partnerId":"%s",
@@ -65,7 +66,7 @@ FFS=[
         "avgPoints":30,
         "pointsExpireYear":2016,
         "pointsExpireMonth":10,
-        "partnerId":"0",
+        "partnerId":"1001",
         "productId":"BQ100001"
     },
     {
@@ -79,7 +80,7 @@ FFS=[
         "avgPoints":30,
         "pointsExpireYear":2016,
         "pointsExpireMonth":10,
-        "partnerId":"0",
+        "partnerId":"1001",
         "productId":"BQ100001"
     },
     {
@@ -93,7 +94,7 @@ FFS=[
         "avgPoints":30,
         "pointsExpireYear":2016,
         "pointsExpireMonth":10,
-        "partnerId":"0",
+        "partnerId":"1002",
         "productId":"BQ100001"
     }
 ]
