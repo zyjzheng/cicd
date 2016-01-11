@@ -3,21 +3,6 @@ CREATE SCHEMA IF NOT EXISTS `db_hdb_core`
   COLLATE utf8_general_ci;
 USE `db_hdb_core`;
 
-DROP TABLE IF EXISTS `user_account_points`;
-CREATE TABLE `user_account_points` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
-  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
-  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
-  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
-  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
-  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
-  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
-
 DROP TABLE IF EXISTS `org_account_points`;
 CREATE TABLE `org_account_points` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -31,6 +16,486 @@ CREATE TABLE `org_account_points` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_org_account_id` (`org_account_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心-组织账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_00`;
+CREATE TABLE `user_account_points_00` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=100000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_01`;
+CREATE TABLE `user_account_points_01` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=110000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_02`;
+CREATE TABLE `user_account_points_02` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=120000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_03`;
+CREATE TABLE `user_account_points_03` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=130000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_04`;
+CREATE TABLE `user_account_points_04` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=140000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_05`;
+CREATE TABLE `user_account_points_05` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=150000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_06`;
+CREATE TABLE `user_account_points_06` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=160000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_07`;
+CREATE TABLE `user_account_points_07` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=170000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_08`;
+CREATE TABLE `user_account_points_08` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=180000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_09`;
+CREATE TABLE `user_account_points_09` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=190000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_10`;
+CREATE TABLE `user_account_points_10` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=200000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_11`;
+CREATE TABLE `user_account_points_11` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=210000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_12`;
+CREATE TABLE `user_account_points_12` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=220000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_13`;
+CREATE TABLE `user_account_points_13` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=230000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_14`;
+CREATE TABLE `user_account_points_14` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=240000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_15`;
+CREATE TABLE `user_account_points_15` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=250000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_16`;
+CREATE TABLE `user_account_points_16` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=260000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_17`;
+CREATE TABLE `user_account_points_17` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=270000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_18`;
+CREATE TABLE `user_account_points_18` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=280000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_19`;
+CREATE TABLE `user_account_points_19` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=290000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_20`;
+CREATE TABLE `user_account_points_20` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=300000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_21`;
+CREATE TABLE `user_account_points_21` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=310000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_22`;
+CREATE TABLE `user_account_points_22` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=320000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_23`;
+CREATE TABLE `user_account_points_23` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=330000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_24`;
+CREATE TABLE `user_account_points_24` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=340000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_25`;
+CREATE TABLE `user_account_points_25` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=350000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_26`;
+CREATE TABLE `user_account_points_26` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=360000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_27`;
+CREATE TABLE `user_account_points_27` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=370000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_28`;
+CREATE TABLE `user_account_points_28` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=380000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_29`;
+CREATE TABLE `user_account_points_29` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=390000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_30`;
+CREATE TABLE `user_account_points_30` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=400000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
+
+DROP TABLE IF EXISTS `user_account_points_31`;
+CREATE TABLE `user_account_points_31` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户ID',
+  `points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户拥有的积分余额',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户获取的总积分',
+  `paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户账户花掉的总积分',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常账户, 2. 冻结账户',
+  `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_user_account_id` (`user_account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=410000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心用户账户积分表';
 
 DROP TABLE IF EXISTS `points_payment_00`;
 CREATE TABLE `points_payment_00` (
@@ -1569,3 +2034,20 @@ CREATE TABLE `points_recv_31` (
   UNIQUE KEY `uk_user_account_id_expire_date_org_account_id` (`user_account_id`,`expire_date`, `org_account_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=410000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心积分获取记录';
 
+INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
+  (1000, 10000000000000, 0);
+  
+INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
+  (1001, 10000000000000, 0);
+  
+INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
+  (1002, 10000000000000, 0);
+  
+INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
+  (1003, 10000000000000, 0);
+  
+INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
+  (1004, 10000000000000, 0);
+
+INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
+  (8000001, 10000000000000, 0);
