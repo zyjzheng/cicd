@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS `inventory_detail` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
+  UNIQUE INDEX `uk_item_id_code` (`item_id`, `code`),
   KEY `idx_item_id` (`item_id`),
   KEY `idx_reserved_id` (`reserved_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

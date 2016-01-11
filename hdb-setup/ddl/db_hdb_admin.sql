@@ -47,6 +47,6 @@ CREATE TABLE IF NOT EXISTS `admin_instock` (
   `status` tinyint(2) NOT NULL DEFAULT '0',
   `total_no` int(11) NOT NULL DEFAULT '0',
   `failed_no` int(11) NOT NULL DEFAULT '0',
-  `message` text NOT NULL,
+  `result_file` VARCHAR(255) NOT NULL DEFAULT '\'\'',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
