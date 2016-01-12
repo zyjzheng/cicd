@@ -4,6 +4,8 @@ import os
 import sys
 import string
 import random
+import time
+import datetime
 
 ITEM_TEMPLATE='''{
     "item": {
@@ -60,7 +62,7 @@ FFS=[
         "notes":"恒大冰泉扫码抽分活动0",
         "type":"FFAC|M|YXQM",
         "beginTime":"2016-01-01 00:00:00",
-        "finishTime":"2016-02-01 00:00:00",
+        "finishTime":"2019-01-01 00:00:00",
         "maxPoints":100,
         "minPoints":10,
         "avgPoints":50,
@@ -74,7 +76,7 @@ FFS=[
         "notes":"恒大冰泉扫码抽分活动1",
         "type":"FFAC|S|YWYM",
         "beginTime":"2016-01-01 00:00:00",
-        "finishTime":"2016-02-01 00:00:00",
+        "finishTime":"2019-02-01 00:00:00",
         "maxPoints":100,
         "minPoints":10,
         "avgPoints":40,
@@ -88,7 +90,7 @@ FFS=[
         "notes":"恒大冰泉扫码抽分活动2",
         "type":"FFAC|M|YXQM",
         "beginTime":"2016-01-01 00:00:00",
-        "finishTime":"2016-02-01 00:00:00",
+        "finishTime":"2019-02-01 00:00:00",
         "maxPoints":100,
         "minPoints":10,
         "avgPoints":45,
@@ -128,6 +130,12 @@ def GenerateInventory(idx, path, orgId):
 
 def GenerateFF(idx, path):
     ff=FFS[idx]
+    time1=(datetime.datetime.now()+datetime.timedelta(hours=4))
+    time2=(datetime.datetime.now()+datetime.timedelta(days=10))
+    beginTime=time1.strftime("%Y-%m-%d %H:%M:%S")
+    finishTime=time2.strftime("%Y-%m-%d %H:%M:%S")
+    ff['beginTime'] = beginTime
+    ff['finishTime'] = finishTime
     fp = open(path+"/ffs/" + str(idx), 'w')
     ffstring = FF_TEMPLATE % (ff['name'], ff['notes'], ff['type'], ff['beginTime'], ff['finishTime'],
                               ff['maxPoints'], ff['minPoints'], ff['avgPoints'], ff['pointsExpireYear'],

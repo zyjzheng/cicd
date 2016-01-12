@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50709
 File Encoding         : 65001
 
-Date: 2016-01-05 13:41:48
+Date: 2016-01-12 18:24:08
 */
 
 DROP DATABASE IF EXISTS `db_hdb_ffactivity`;
@@ -18,6 +18,10 @@ CREATE DATABASE IF NOT EXISTS `db_hdb_ffactivity` /*!40100 DEFAULT CHARACTER SET
 USE `db_hdb_ffactivity`;
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Records of conn_test
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for ff_activity
@@ -48,4 +52,52 @@ CREATE TABLE `ff_activity` (
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志 1-已删除 0-未删除',
   PRIMARY KEY (`id`),
   KEY `udx_activity_code` (`ac_code`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for wxhb_open_records
+-- ----------------------------
+DROP TABLE IF EXISTS `wxhb_open_records`;
+CREATE TABLE `wxhb_open_records` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `hb_id` varchar(200) NOT NULL DEFAULT '' COMMENT '红包ID=[扫码流水]:[红包活动码]',
+  `wx_unionid` varchar(100) NOT NULL DEFAULT '0' COMMENT '拆红包微信用户ID',
+  `opened_count` int(11) NOT NULL DEFAULT '1' COMMENT '拆红包次数',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_hongbaoid` (`hb_id`,`create_time`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+
+-- ----------------------------
+-- Table structure for ywym_scan_records
+-- ----------------------------
+DROP TABLE IF EXISTS `ywym_scan_records`;
+CREATE TABLE `ywym_scan_records` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `ywym_code` varchar(100) NOT NULL DEFAULT '' COMMENT '一物一码CODE',
+  `user_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '扫码用户ID',
+  `scanned_count` int(11) NOT NULL DEFAULT '1' COMMENT '扫码次数',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_ywymcode` (`ywym_code`,`create_time`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ywym_scan_records
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for yxqm_scan_records
+-- ----------------------------
+DROP TABLE IF EXISTS `yxqm_scan_records`;
+CREATE TABLE `yxqm_scan_records` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `yxqm_code` varchar(100) NOT NULL DEFAULT '' COMMENT '有效期码',
+  `user_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '用户编号',
+  `scanned_count` int(11) NOT NULL DEFAULT '1' COMMENT '扫码次数',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_yxqmcode` (`yxqm_code`,`create_time`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
