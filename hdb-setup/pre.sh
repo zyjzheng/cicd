@@ -4,7 +4,7 @@ ROOT_DIR=$(cd "$(dirname "$0")";pwd)
 . $ROOT_DIR/hdb.rc
 
 import_mysql(){
-    cat $1 | $MYSQL_CMD -h$MYSQL_HOST -u$MYSQL_USERNAME -p$MYSQL_PASSWORD
+    cat $1 | $MYSQL_CMD -h$MYSQL_HOST -u$MYSQL_USERNAME -p$MYSQL_PASSWORD --default-character-set=utf8
 }
 
 init_mysql() {
