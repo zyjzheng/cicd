@@ -186,16 +186,4 @@ CREATE TABLE `order_payment` (
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录修改时间',
   PRIMARY KEY (`id`),
   KEY `index_order_id` (`order_id`)
-) ENGINE=InnoDB  AUTO_INCREMENT=1000000000 DEFAULT CHARSET=utf8 COMMENT '恒大积分商城订单支付记录';db_hdb_mall
-
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES (8000001, 10000000000000, 0);
-
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES (1000, 10000000000000, 0);
-
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES (1001, 10000000000000, 0);
-  
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES (1002, 10000000000000, 0);
-  
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES (1003, 10000000000000, 0);
-  
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES (1004, 10000000000000, 0);
+) ENGINE=InnoDB  AUTO_INCREMENT=1000000000 DEFAULT CHARSET=utf8 COMMENT '恒大积分商城订单支付记录';
