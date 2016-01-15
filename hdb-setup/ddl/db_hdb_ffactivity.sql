@@ -52,7 +52,7 @@ CREATE TABLE `ff_activity` (
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志 1-已删除 0-未删除',
   PRIMARY KEY (`id`),
   KEY `udx_activity_code` (`ac_code`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8 COMMENT='活动表';
 
 -- ----------------------------
 -- Table structure for wxhb_open_records
@@ -66,7 +66,7 @@ CREATE TABLE `wxhb_open_records` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`),
   KEY `idx_hongbaoid` (`hb_id`,`create_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='微信红包拆奖记录表';
 
 
 -- ----------------------------
@@ -81,7 +81,7 @@ CREATE TABLE `ywym_scan_records` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`),
   KEY `idx_ywymcode` (`ywym_code`,`create_time`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='一物一码抽分记录表';
 
 -- ----------------------------
 -- Records of ywym_scan_records
@@ -99,5 +99,5 @@ CREATE TABLE `yxqm_scan_records` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`),
   KEY `idx_yxqmcode` (`yxqm_code`,`create_time`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='有效期码抽分记录表';
 
