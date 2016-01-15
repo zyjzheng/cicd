@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `sms_templates` (
   PRIMARY KEY (`channel`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- 数据导出被取消选择。
+insert  into `sms_templates`(`channel`,`template`) values (1000001,'恒大积分验证码为%s，请在10分钟内使用，注意保密哦！'),(1000003,'亲爱的积分商城用户，您购买的%s的优惠券码为%s');
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
