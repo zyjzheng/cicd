@@ -38,18 +38,18 @@ CREATE TABLE admin_delivery (
 
 DROP TABLE IF EXISTS `admin_instock`;
 CREATE TABLE IF NOT EXISTS `admin_instock` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `org_id` bigint(20) NOT NULL DEFAULT '0',
-  `item_id` bigint(20) NOT NULL DEFAULT '0',
-  `csv_file` varchar(255) NOT NULL DEFAULT '0',
-  `create_by` varchar(50) NOT NULL DEFAULT "系统", 
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `org_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '合作伙伴ID',
+  `item_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '商品ID',
+  `csv_file` varchar(255) NOT NULL DEFAULT '0' COMMENT '库存文件',
+  `create_by` varchar(50) NOT NULL DEFAULT "系统" COMMENT '创建者', 
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `finish_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `update_by` varchar(50) NOT NULL DEFAULT "系统",
-  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `status` tinyint(2) NOT NULL DEFAULT '0',
-  `total_no` int(11) NOT NULL DEFAULT '0',
-  `failed_no` int(11) NOT NULL DEFAULT '0',
-  `result_file` VARCHAR(255) NOT NULL DEFAULT '\'\'',
+  `finish_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '导入完成时间',
+  `update_by` varchar(50) NOT NULL DEFAULT "系统" COMMENT '更新者',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '导入状态 0未完成，1进行中，2完成',
+  `total_no` int(11) NOT NULL DEFAULT '0' COMMENT '券码总数',
+  `failed_no` int(11) NOT NULL DEFAULT '0' COMMENT '导入失败数目',
+  `result_file` VARCHAR(255) NOT NULL DEFAULT '\'\'' COMMENT '失败信息文件',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='库存导入记录';
