@@ -2,20 +2,7 @@ DROP DATABASE IF EXISTS `db_hdb_uc`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_uc` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_uc`;
 
-DROP TABLE IF EXISTS `weixin_user`;
-CREATE TABLE `weixin_user` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `open_id` varchar(100) NOT NULL DEFAULT '' COMMENT '公众号openid',
-  `union_id` varchar(100) NOT NULL DEFAULT '' COMMENT '开放平台unionid',
-  `nickname` varchar(200) CHARACTER SET utf8mb4 NOT NULL DEFAULT '' COMMENT '用户昵称',
-  `avatar_url` varchar(1000) NOT NULL,
-  `sex` varchar(2) NOT NULL DEFAULT '' COMMENT '性别',
-  `country` varchar(100) NOT NULL DEFAULT '' COMMENT '国家',
-  `province` varchar(100) NOT NULL DEFAULT '' COMMENT '省',
-  `city` varchar(100) NOT NULL DEFAULT '' COMMENT '市',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `idx_unionid` (`union_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 -- ----------------------------
@@ -93,6 +80,24 @@ CREATE TABLE `conn_test` (
   `a` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+-- ----------------------------
+-- Table structure for weixin_user
+-- ----------------------------
+DROP TABLE IF EXISTS `weixin_user`;
+CREATE TABLE `weixin_user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `open_id` varchar(100) NOT NULL DEFAULT '' COMMENT '公众号openid',
+  `union_id` varchar(100) NOT NULL DEFAULT '' COMMENT '开放平台unionid',
+  `nickname` varchar(200) CHARACTER SET utf8mb4 NOT NULL DEFAULT '' COMMENT '用户昵称',
+  `avatar_url` varchar(1000) NOT NULL DEFAULT '' COMMENT '头像URL',
+  `sex` varchar(2) NOT NULL DEFAULT '' COMMENT '性别',
+  `country` varchar(100) NOT NULL DEFAULT '' COMMENT '国家',
+  `province` varchar(100) NOT NULL DEFAULT '' COMMENT '省',
+  `city` varchar(100) NOT NULL DEFAULT '' COMMENT '市',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idx_unionid` (`union_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微信用户信息';
 
 
 -- ----------------------------

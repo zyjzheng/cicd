@@ -21,17 +21,17 @@ USE `db_hdb_mall`;
 -- 导出  表 db_hdb_mall.inventory 结构
 DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE IF NOT EXISTS `inventory` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `item_id` bigint(20) unsigned NOT NULL DEFAULT '100001',
-  `item_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0 优惠券\n1 实物',
-  `org_id` bigint(20) unsigned NOT NULL DEFAULT '100001',
-  `amount` int(10) unsigned NOT NULL DEFAULT '0',
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `item_id` bigint(20) unsigned NOT NULL DEFAULT '100001' COMMENT '商品ID',
+  `item_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '1 实物\n2 优惠券',
+  `org_id` bigint(20) unsigned NOT NULL DEFAULT '100001'COMMENT '合作伙伴ID',
+  `amount` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '库存数量',
   `delete_flag` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0 未删除\n1 删除',
-  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_item_id` (`item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '库存信息表';
 
 -- 数据导出被取消选择。
 
@@ -39,19 +39,19 @@ CREATE TABLE IF NOT EXISTS `inventory` (
 -- 导出  表 db_hdb_mall.inventory_detail 结构
 DROP TABLE IF EXISTS `inventory_detail`;
 CREATE TABLE IF NOT EXISTS `inventory_detail` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `item_id` bigint(20) NOT NULL DEFAULT '100001',
-  `reserved_id` varchar(128) NOT NULL DEFAULT '0',
-  `code` varchar(128) NOT NULL DEFAULT '0000000000000000000000000',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `item_id` bigint(20) NOT NULL DEFAULT '100001' COMMENT '商品ID',
+  `reserved_id` varchar(128) NOT NULL DEFAULT '0' COMMENT '库存锁ID',
+  `code` varchar(128) NOT NULL DEFAULT '0000000000000000000000000' COMMENT '券码',
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0 表示未出售\n1 表示出售',
   `delete_flag` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0 未删除\n1 删除',
-  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
   UNIQUE INDEX `uk_item_id_code` (`item_id`, `code`),
   KEY `idx_item_id` (`item_id`),
   KEY `idx_reserved_id` (`reserved_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '券码信息表';
 
 -- 数据导出被取消选择。
 
@@ -59,13 +59,13 @@ CREATE TABLE IF NOT EXISTS `inventory_detail` (
 -- 导出  表 db_hdb_mall.inventory_inreserve 结构
 DROP TABLE IF EXISTS `inventory_inreserve`;
 CREATE TABLE IF NOT EXISTS `inventory_inreserve` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `reserved_id` varchar(128) NOT NULL DEFAULT '0',
-  `item_id` bigint(20) NOT NULL DEFAULT '0',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `reserved_id` varchar(128) NOT NULL DEFAULT '0' COMMENT '库存预留ID',
+  `item_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '商品ID',
   `amount` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_reserved_id` (`reserved_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '库存锁信息表';
 
 -- 数据导出被取消选择。
 
