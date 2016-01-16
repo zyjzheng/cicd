@@ -98,7 +98,10 @@ CREATE TABLE `weixin_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_unionid` (`union_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='微信用户信息';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c39f4388b4fa7ec47b901474a5dee5ba6dcd7d3
 
 -- ----------------------------
 -- Records of sys_areas
