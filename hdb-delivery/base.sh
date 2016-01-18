@@ -10,7 +10,7 @@ DIR=$(cd "$(dirname "$0")";pwd)
 SSH_CMD=ssh
 SSH_OPTION="-o StrictHostKeyChecking=no -o PasswordAuthentication=no"
 SSH_KEY=${DIR}/hdb.key
-SSH_USER=www
+SSH_USER=root
 SCP_CMD=scp
 
 ssh_exec() {
