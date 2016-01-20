@@ -28,11 +28,11 @@ COMPONNET=${2}
 
 
 
-[ ! -f ${DIR}/${COMPONNET}.rc ] && err "Componnet ${COMPONNET} not found!"
+[ ! -f ${DIR}/${HDB_ENV}/${COMPONNET}.rc ] && err "Componnet ${COMPONNET} not found!"
 
 
 
-. ${DIR}/${COMPONNET}.rc
+. ${DIR}/${HDB_ENV}/${COMPONNET}.rc
 
 
 
