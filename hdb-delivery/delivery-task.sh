@@ -23,8 +23,9 @@ env_check(){
 
 stop(){
     if [ -f ${WORK_DIR}/${COMPONNET}/bin/stop.sh ]; then
+        cd ${WORK_DIR}/${COMPONNET}
         for task in `echo ${TASKS} |awk -F, '{NF-=0}1'`; do
-            bash ${WORK_DIR}/${COMPONNET}/bin/stop.sh ${task}
+            bash bin/stop.sh ${task}
         done
     fi
 }
@@ -32,8 +33,9 @@ stop(){
 start() {
     ls ${WORK_DIR}/${COMPONNET}/bin/start.sh
     if [ -f ${WORK_DIR}/${COMPONNET}/bin/start.sh ]; then
+        cd ${WORK_DIR}/${COMPONNET}/
         for task in `echo ${TASKS} |awk -F, '{NF-=0}1'`; do
-            nohup bash ${WORK_DIR}/${COMPONNET}/bin/start.sh ${task} >> ${WORK_DIR}/${COMPONNET}/logs/${task}.log 2>&1 &
+            nohup bash bin/start.sh ${task} >> ${WORK_DIR}/${COMPONNET}/logs/${task}.log 2>&1 &
             PIDS=$PIDS,$!
         done
     fi
