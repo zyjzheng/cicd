@@ -64,7 +64,7 @@ reset() {
     curl --user ${HTTP_BASIC_USER}:${HTTP_BASIC_PASSPORD} ${FILE_REPO}/builds/${TARGET_ENV}/${COMPONNET}/${COMPONNET}-latest.tar.gz > ${WORK_DIR}/${COMPONNET}-latest.tar.gz
     [ -d ${WORK_DIR}/node-${COMPONNET} ] && rm -rf ${WORK_DIR}/node-${COMPONNET}
     mkdir -p ${WORK_DIR}/node-${COMPONNET}
-    tar -xvf ${WORK_DIR}/${COMPONNET}-latest.tar.gz -C ${WORK_DIR}/node-${COMPONNET}
+    tar -xf ${WORK_DIR}/${COMPONNET}-latest.tar.gz -C ${WORK_DIR}/node-${COMPONNET}
     curl --user ${HTTP_BASIC_USER}:${HTTP_BASIC_PASSPORD} ${FILE_REPO}/builds/${TARGET_ENV}/${COMPONNET}/${COMPONNET}-latest.json > ${WORK_DIR}/node-${COMPONNET}/config.json
     cd ${WORK_DIR}/node-${COMPONNET}
     [ ! -d ${WORK_DIR}/node_modules ] && mkdir -p ${WORK_DIR}/node_modules
