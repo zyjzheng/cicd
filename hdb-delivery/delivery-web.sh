@@ -41,8 +41,9 @@ env_check(){
 stop(){
     ${PM2_CMD} stop $COMPONNET
     sleep 1
-    ${PM2_CMD} delete $COMPONNET
+    #${PM2_CMD} delete $COMPONNET
     sleep 1
+    return 0
 }
 
 start() {

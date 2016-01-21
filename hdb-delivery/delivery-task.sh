@@ -31,7 +31,6 @@ stop(){
 }
 
 start() {
-    ls ${WORK_DIR}/${COMPONNET}/bin/start.sh
     if [ -f ${WORK_DIR}/${COMPONNET}/bin/start.sh ]; then
         cd ${WORK_DIR}/${COMPONNET}/
         for task in `echo ${TASKS} |awk -F, '{NF-=0}1'`; do
