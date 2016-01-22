@@ -68,8 +68,8 @@ reset() {
     tar -xf ${WORK_DIR}/${COMPONNET}-latest.tar.gz -C ${WORK_DIR}/node-${COMPONNET}
     curl --user ${HTTP_BASIC_USER}:${HTTP_BASIC_PASSPORD} ${FILE_REPO}/builds/${TARGET_ENV}/${COMPONNET}/${COMPONNET}-latest.json > ${WORK_DIR}/node-${COMPONNET}/config.json
     cd ${WORK_DIR}/node-${COMPONNET}
-    [ ! -d ${WORK_DIR}/node_modules ] && mkdir -p ${WORK_DIR}/node_modules
-    ln -s ${WORK_DIR}/node_modules ${WORK_DIR}/node-${COMPONNET}/node_modules
+    #[ ! -d ${WORK_DIR}/node_modules ] && mkdir -p ${WORK_DIR}/node_modules
+    #ln -s ${WORK_DIR}/node_modules ${WORK_DIR}/node-${COMPONNET}/node_modules
     ${NPM_CMD} config set registry http://registry.npm.taobao.org/
     ${NPM_CMD} install
     ${GULP_CMD}
