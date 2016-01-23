@@ -1,5 +1,5 @@
 
-WORK_DIR=/data
+WORK_DIR=/home/www/hdb
 HTTP_BASIC_USER=hdb
 HTTP_BASIC_PASSPORD=p0o9i8u7
 TOMCAT_PACKAGE_NAME=apache-tomcat-7.0.65
@@ -13,6 +13,9 @@ SSH_OPTION="-o StrictHostKeyChecking=no -o PasswordAuthentication=no"
 SSH_KEY=${DIR}/hdb.key
 SSH_USER=www
 SCP_CMD=scp
+
+
+[ ! -d ${WORK_DIR} ] && mkdir -p ${WORK_DIR}
 
 ssh_exec() {
 	if [ -f ${SSH_KEY} ]; then 
