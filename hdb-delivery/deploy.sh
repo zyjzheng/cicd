@@ -31,6 +31,6 @@ for ip in ${IP_LIST}; do
 	#check_err "ssh_exec ${ip} \'/bin/chmod +x /tmp/base.sh\'" "Failed to chmod +x base.sh to ${ip}"
 	#check_err "ssh_exec ${ip} \'/bin/chmod +x /tmp/delivery.sh\'" "Failed to chmod +x delivery.sh to ${ip}"
 	ssh_exec ${ip} "/bin/bash /tmp/delivery.sh ${HDB_ENV} ${COMPONNET} ${TOMCAT_LISTEN_PORT} ${TOMCAT_AJP_PORT} ${TOMCAT_SHUTDOWN_PORT} ${PORTS}"
-	[ ! $? ] && err "Failed to exec delivery.sh on ${ip}!"
+	[ ! "$?" = "0" ] && err "Failed to exec delivery.sh on ${ip}!"
 done
 exit 0

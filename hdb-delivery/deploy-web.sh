@@ -58,8 +58,7 @@ for ip in ${IP_LIST}; do
 
 	ssh_exec ${ip} "/bin/bash -l /tmp/delivery-web.sh ${HDB_ENV} ${COMPONNET} ${CLUSTER_NUMBER} ${PORTS}"
 
-	[ ! $? ] && err "Failed to exec delivery-web.sh on ${ip}!"
+	[ ! "$?" = "0" ] && err "Failed to exec delivery-web.sh on ${ip}!"
 
 done
-
 exit 0

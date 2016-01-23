@@ -36,7 +36,7 @@ for ip in ${IP_LIST}; do
 	#check_err "ssh_exec ${ip} \'/bin/chmod +x /tmp/delivery.sh\'" "Failed to chmod +x delivery.sh to ${ip}"
 	ssh_exec ${ip} "/bin/bash -l /tmp/delivery-task.sh ${HDB_ENV} ${COMPONNET} ${TASKS}"
 
-	[ ! $? ] && err "Failed to exec delivery-task.sh on ${ip}!"
+	[ ! "$?" = "0" ] && err "Failed to exec delivery-task.sh on ${ip}!"
 
 done
 
