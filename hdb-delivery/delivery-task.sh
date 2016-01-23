@@ -61,7 +61,7 @@ status() {
 }
 
 check_err env_check "Failed to check runtime env!"
-check_err reset "Failed to reset ${COMPONNET}!"
 check_err stop "Failed to stop ${COMPONNET}!"
+check_err reset "Failed to reset ${COMPONNET}!"
 check_err start "Failed to start ${COMPONNET}!"
 check_err status "Failed to check status of ${COMPONNET}"
