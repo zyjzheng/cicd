@@ -1,10 +1,10 @@
 
-WORK_DIR=/home/www/hdb
+WORK_DIR=/data/hdb
 HTTP_BASIC_USER=hdb
 HTTP_BASIC_PASSPORD=p0o9i8u7
 TOMCAT_PACKAGE_NAME=apache-tomcat-7.0.65
 NODE_PACKAGE_NAME=node-v4.2.4-linux-x64
-FILE_REPO=http://120.24.44.222:8080
+FILE_REPO=http://120.26.219.48:8080
 
 DIR=$(cd "$(dirname "$0")";pwd)
 
