@@ -1,7 +1,7 @@
 CREATE SCHEMA IF NOT EXISTS `db_hdb_laba`
   DEFAULT CHARACTER SET utf8
-  COLLATE utf8_general_ci;
-USE `db_hdb_laba`;
+    COLLATE utf8_general_ci;
+    USE `db_hdb_laba`;
 
 SET FOREIGN_KEY_CHECKS=0;
 
@@ -19,7 +19,8 @@ CREATE TABLE `betting_records_00` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`)
-) ENGINE=InnoDB AUTO_INCREMENT=10000000002062 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+
 
 -- ----------------------------
 -- Table structure for betting_records_01
@@ -35,7 +36,7 @@ CREATE TABLE `betting_records_01` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10100000000196 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
 
 -- ----------------------------
 -- Table structure for betting_records_02
@@ -51,7 +52,7 @@ CREATE TABLE `betting_records_02` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10200000000320 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
 
 -- ----------------------------
 -- Table structure for betting_records_03
@@ -67,7 +68,7 @@ CREATE TABLE `betting_records_03` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10300000000433 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
 
 -- ----------------------------
 -- Table structure for betting_records_04
@@ -83,7 +84,7 @@ CREATE TABLE `betting_records_04` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10400000000697 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
 
 -- ----------------------------
 -- Table structure for betting_records_05
@@ -99,7 +100,7 @@ CREATE TABLE `betting_records_05` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10500000000155 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
 
 -- ----------------------------
 -- Table structure for betting_records_06
@@ -115,7 +116,7 @@ CREATE TABLE `betting_records_06` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10600000000160 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
 
 -- ----------------------------
 -- Table structure for betting_records_07
@@ -147,7 +148,7 @@ CREATE TABLE `betting_records_08` (
   `prize_pool_id` varchar(50) NOT NULL DEFAULT '' COMMENT '奖池编号',
   PRIMARY KEY (`id`),
   KEY `IDX_USER_TIME` (`user_id`,`betting_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10800000000055 DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='拉霸记录表';
 
 -- ----------------------------
 -- Table structure for betting_records_09
@@ -534,7 +535,12 @@ CREATE TABLE `betting_rules` (
   `active_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '激活状态 0-未激活 1-已激活',
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='投注规则表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='投注规则表';
+
+-- ----------------------------
+-- Records of betting_rules
+-- ----------------------------
+INSERT INTO `betting_rules` VALUES ('1', '10', '5000', '50000', '10', '1000-01-01 00:00:00', '2016-01-19 15:04:57', 'peter', '', '1', '0');
 
 -- ----------------------------
 -- Table structure for daily_rank_records
@@ -548,7 +554,7 @@ CREATE TABLE `daily_rank_records` (
   `first_bet_time` datetime NOT NULL DEFAULT '9999-01-01 00:00:00' COMMENT '用户当日第一次拉霸时间',
   PRIMARY KEY (`id`),
   KEY `idx_date` (`rank_date`,`winning_points`,`first_bet_time`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='每日排行榜记录表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='每日排行榜记录表';
 
 -- ----------------------------
 -- Table structure for game_notes
@@ -564,7 +570,12 @@ CREATE TABLE `game_notes` (
   `active_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '激活状态 0-未激活 1-已激活',
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='游戏规则说明表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='游戏规则说明表';
+
+-- ----------------------------
+-- Records of game_notes
+-- ----------------------------
+INSERT INTO `game_notes` VALUES ('1', '游戏规则如下：每人每天投注上限5000份，单次投注上限500份，单次投注下限10份，特等奖100倍积分返还，一等奖10倍，二等奖2倍', '1000-01-01 00:00:00', '2016-01-21 16:40:34', 'peter', '', '1', '0');
 
 -- ----------------------------
 -- Table structure for pointing_rules
@@ -583,7 +594,12 @@ CREATE TABLE `pointing_rules` (
   `active_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '激活标志 0-未激活 1-已激活',
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='返奖规则表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='返奖规则表';
+
+-- ----------------------------
+-- Records of pointing_rules
+-- ----------------------------
+INSERT INTO `pointing_rules` VALUES ('1', '100', '10', '2', '0.2', '1000-01-01 00:00:00', '2016-01-19 15:19:30', 'peter', '', '1', '0');
 
 -- ----------------------------
 -- Table structure for prize_pool_instances
@@ -599,7 +615,8 @@ CREATE TABLE `prize_pool_instances` (
   `total_received_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '总收获分数',
   `total_paied_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '总发奖分数',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='中奖奖池表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='中奖奖池表';
+
 
 -- ----------------------------
 -- Table structure for winning_rules
@@ -618,4 +635,9 @@ CREATE TABLE `winning_rules` (
   `active_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '激活标志 0-未激活 1-已激活',
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='中奖规则设置表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='中奖规则设置表';
+
+-- ----------------------------
+-- Records of winning_rules
+-- ----------------------------
+INSERT INTO `winning_rules` VALUES ('1', '1', '5', '20000', '100000', '1000-01-01 00:00:00', '2016-01-19 15:15:46', 'peter', '', '1', '0');
