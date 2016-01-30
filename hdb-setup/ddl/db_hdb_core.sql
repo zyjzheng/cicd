@@ -7,8 +7,10 @@ DROP TABLE IF EXISTS `org_account_points`;
 CREATE TABLE `org_account_points` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `org_account_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '组织账户ID',
+  `org_desc` varchar(128) NOT NULL DEFAULT '' COMMENT '组织账户描述',
   `points_pool` bigint(20) NOT NULL DEFAULT '0' COMMENT '组织账户积分池总量',
   `used_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '组织账户积分池使用量',
+  `recved_points` bigint(20) NOT NULL DEFAULT '0' COMMENT '组织账户盈利积分',
   `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1. 正常商户, 2. 冻结商户',
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
@@ -2034,20 +2036,28 @@ CREATE TABLE `points_recv_31` (
   UNIQUE KEY `uk_user_account_id_expire_date_org_account_id` (`user_account_id`,`expire_date`, `org_account_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=410000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心积分获取记录';
 
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
-  (1000, 10000000000000, 0);
-  
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
-  (1001, 10000000000000, 0);
-  
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
-  (1002, 10000000000000, 0);
-  
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
-  (1003, 10000000000000, 0);
-  
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
-  (1004, 10000000000000, 0);
 
-INSERT INTO `org_account_points` (`org_account_id`, `points_pool`, `used_points`) VALUES
-  (8000001, 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(1001, '恒大冰泉', 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(1002, '恒大地产', 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(1003, '恒大粮油', 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(1004, '恒大乳业', 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(10001, '恒大互联网积分兑换', 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(10002, '恒大互联网积分抽奖', 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(10003, '恒大互联网积分猜球', 10000000000000, 0);
+	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(10004, '恒大互联网积分拉霸', 10000000000000, 0);
