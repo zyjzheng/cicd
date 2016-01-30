@@ -23,7 +23,628 @@ CREATE TABLE `lottery_activity` (
 
 /*Table structure for table `lottery_order` */
 
-CREATE TABLE `lottery_order` (
+CREATE TABLE `lottery_order_00` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_01` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_02` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_03` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_04` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+
+CREATE TABLE `lottery_order_05` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_06` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_07` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_08` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_09` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_10` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_11` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_12` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_13` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_14` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_15` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_16` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_17` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_18` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_19` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_20` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_21` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_22` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_23` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_24` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_25` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_26` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_27` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_28` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_29` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_30` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动id',
+  `quantity` bigint(20) unsigned NOT NULL COMMENT '下单数量',
+  `create_time` datetime NOT NULL COMMENT '下单时间',
+  `txn_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分流水ID',
+  `user_ip_address` varchar(128) DEFAULT '' COMMENT 'IP地址',
+  `user_ip_location` varchar(1024) DEFAULT '' COMMENT 'IP地址对应地址',
+  `user_address` varchar(1024) DEFAULT '' COMMENT '发货地址',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '订单状态, 0-未开奖, 1-未中奖, 2-中奖',
+  `entry_point` int(10) DEFAULT NULL COMMENT '单笔注数',
+  `entrant_count` int(11) DEFAULT NULL COMMENT '参与人数',
+  PRIMARY KEY (`id`),
+  KEY `idx_lottery_order_user_id` (`user_id`),
+  KEY `idx_lottery_order_activity_id` (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60001139585 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `lottery_order_31` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `order_no` varchar(32) NOT NULL COMMENT '订单编号(年月日+uuid)',
   `user_id` bigint(20) unsigned NOT NULL COMMENT '用户id',

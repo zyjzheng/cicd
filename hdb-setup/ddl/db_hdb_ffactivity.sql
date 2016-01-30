@@ -19,6 +19,9 @@ USE `db_hdb_ffactivity`;
 
 SET FOREIGN_KEY_CHECKS=0;
 
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
 -- ----------------------------
 -- Records of conn_test
 -- ----------------------------

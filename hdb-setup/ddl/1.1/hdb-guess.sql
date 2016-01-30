@@ -12,7 +12,7 @@ CREATE TABLE `guess_match` (
   `home_team_id` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '主队的id',
   `guest_team_id` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '客队的id',
   `begin_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '比赛开始时间',  
-  `status` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '比赛状态：0代表未开始，1代表进行中，2代表已结束', 
+  `status` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '比赛状态：0代表未开始，1代表进行中，2代表已结束, 3代表已经开奖', 
   `home_score` TINYINT(2) NOT NULL DEFAULT '0' COMMENT '主队最终得分',
   `guest_score` TINYINT(2) NOT NULL DEFAULT '0' COMMENT '客队最终得分',
   `online_flag` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '上架标志位：0代表下架，1代表上架', 
@@ -32,6 +32,7 @@ CREATE TABLE `guess_team` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `external_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '第三方数据中队的id',
   `name` varchar(255) NOT NULL DEFAULT '' COMMENT '队名',
+  `english_name` varchar(255) NOT NULL DEFAULT '' COMMENT '英文队名',
   `logo` varchar(255) NOT NULL DEFAULT '' COMMENT '队徽',
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '删除标志位：0代表未删除，1代表已删除', 
   `creator` varchar(50) NOT NULL DEFAULT "系统" COMMENT '记录添加者',
@@ -40,7 +41,7 @@ CREATE TABLE `guess_team` (
   `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录更新时间',   
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_guess_team_external_id` (`external_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='猜球球队表';
+) ENGINE=InnoDB AUTO_INCREMENT=100000000000 DEFAULT CHARSET=utf8 COMMENT='猜球球队表';
 
 DROP TABLE IF EXISTS guess_bet_item;
 CREATE TABLE `guess_bet_item` (
@@ -49,7 +50,7 @@ CREATE TABLE `guess_bet_item` (
   `name` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '投注项的名称：胜、平、负、1:1等等',
   `match_id` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '该投注项所关联的比赛Id',
   `result` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '比赛结果是否与该投注项匹配：0代表不匹配，1代表匹配', 
-  `odds` DECIMAL(5,2) NOT NULL DEFAULT '0.00' COMMENT '比赛最终的赔率，用于查看历史比赛的时候用', 
+  `odds` DECIMAL(5,2) NOT NULL DEFAULT '-1.00' COMMENT '比赛最终的赔率，用于查看历史比赛的时候用', 
   `odds_status` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '赔率变化状态：0代表不变，1代表上升，2代表下降',
   `delete_flag` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '删除标志位：0代表未删除，1代表已删除', 
   `creator` VARCHAR(50) NOT NULL DEFAULT "系统" COMMENT '记录添加者',
@@ -58,7 +59,7 @@ CREATE TABLE `guess_bet_item` (
   `update_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录更新时间',   
   PRIMARY KEY (`id`),
   INDEX idx_guess_bet_item_match_id(`match_id`)
-) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='猜球投注项表';
+) ENGINE=INNODB AUTO_INCREMENT=100000000000 DEFAULT CHARSET=utf8 COMMENT='猜球投注项表';
 
 DROP TABLE IF EXISTS guess_config;
 CREATE TABLE `guess_config`(
@@ -72,7 +73,7 @@ CREATE TABLE `guess_config`(
   `update_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '记录更新时间',   
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk_guess_config_config_key` (`config_key`)
-) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='猜球配置项表';
+) ENGINE=INNODB AUTO_INCREMENT=100000000000 DEFAULT CHARSET=utf8 COMMENT='猜球配置项表';
 
 DROP TABLE IF EXISTS guess_bet_00;
 CREATE TABLE `guess_bet_00` (
