@@ -96,7 +96,7 @@ DROP TABLE IF EXISTS `item_image`;
 CREATE TABLE `item_image` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `item_id` bigint(20) NOT NULL DEFAULT '0' COMMENT 'item ID',
-  `image_base_url` varchar(128) NOT NULL DEFAULT '' COMMENT '商品原始url',
+  `image_base_url` varchar(1024) NOT NULL DEFAULT '' COMMENT '商品原始url',
   `sequence` tinyint(4) NOT NULL DEFAULT '0' COMMENT '图片顺序,0为主图',
   `delete_flag` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否删除：0.否,1.是',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
