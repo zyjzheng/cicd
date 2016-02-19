@@ -55,7 +55,7 @@ CREATE TABLE `sms_templates` (
 
 /*Data for the table `sms_templates` */
 
-insert  into `sms_templates`(`channel`,`template`,`account_id`) values (1000001,'恒大积分验证码为%s，请在10分钟内使用，注意保密哦！',1),(1000003,'亲爱的积分商城用户，您购买的%s的优惠券码为%s',2),(1000110,'%s',3);
+insert  into `sms_templates`(`channel`,`template`,`account_id`) values (1000001,'恒大币验证码为%s，请在10分钟内使用，注意保密哦！',1),(1000003,'亲爱的恒大币商城用户，您购买的%s的优惠券码为%s',2),(1000110,'%s',3);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
