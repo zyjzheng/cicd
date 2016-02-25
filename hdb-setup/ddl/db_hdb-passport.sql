@@ -15,6 +15,13 @@ MySQL - 5.7.9-log : Database - db_hdb_passport
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_hdb_passport` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE db_hdb_passport;
 
+DROP TABLE IF EXISTS `conn_test`;
+
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 DROP TABLE IF EXISTS `passport_user_1`;
 DROP TABLE IF EXISTS `passport_user_2`;
 DROP TABLE IF EXISTS `passport_user_3`;

@@ -2,7 +2,11 @@ CREATE SCHEMA IF NOT EXISTS `db_hdb_core`
   DEFAULT CHARACTER SET utf8
   COLLATE utf8_general_ci;
 USE `db_hdb_core`;
+DROP TABLE IF EXISTS `conn_test`;
 
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 DROP TABLE IF EXISTS `org_account_points`;
 CREATE TABLE `org_account_points` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
@@ -2037,7 +2041,8 @@ CREATE TABLE `points_recv_31` (
 ) ENGINE=InnoDB AUTO_INCREMENT=410000000000  DEFAULT CHARSET=utf8 COMMENT='恒大积分核心积分获取记录';
 
 
-	
+INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
+	(1000, '测试发分专供', 10000000000000, 0);	
 INSERT INTO `org_account_points` (`org_account_id`, `org_desc`, `points_pool`, `used_points`) VALUES
 	(1001, '恒大冰泉', 10000000000000, 0);
 	

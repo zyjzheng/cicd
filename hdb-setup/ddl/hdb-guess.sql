@@ -3,6 +3,13 @@ CREATE SCHEMA IF NOT EXISTS db_hdb_guess
   COLLATE utf8_general_ci;
 USE db_hdb_guess;
 
+DROP TABLE IF EXISTS `conn_test`;
+
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 DROP TABLE IF EXISTS guess_match;
 CREATE TABLE `guess_match` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,

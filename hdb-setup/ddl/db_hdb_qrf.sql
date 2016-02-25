@@ -15,6 +15,13 @@ DROP DATABASE IF EXISTS `db_hdb_qrf`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_qrf` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_qrf`;
 
+DROP TABLE IF EXISTS `conn_test`;
+
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 DROP TABLE IF EXISTS `qrf_code`;
 CREATE TABLE `qrf_code` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',

@@ -2,6 +2,13 @@ DROP DATABASE IF EXISTS `db_hdb_indiana`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_indiana` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_indiana`;
 
+DROP TABLE IF EXISTS `conn_test`;
+
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE `indiana_activity_group`(
 	`id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键id',
 	`title` VARCHAR(256) NOT NULL COMMENT '活动标题',

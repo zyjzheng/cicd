@@ -14,7 +14,11 @@
 DROP DATABASE IF EXISTS `db_hdb_admin`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_admin` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_admin`;
+DROP TABLE IF EXISTS `conn_test`;
 
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS admin_delivery;
 CREATE TABLE admin_delivery (

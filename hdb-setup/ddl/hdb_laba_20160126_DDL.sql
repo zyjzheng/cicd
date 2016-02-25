@@ -4,6 +4,11 @@ CREATE SCHEMA IF NOT EXISTS `db_hdb_laba`
     USE `db_hdb_laba`;
 
 SET FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS `conn_test`;
+
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for betting_records_00

@@ -2,7 +2,11 @@ DROP DATABASE IF EXISTS `db_hdb_uc`;
 CREATE DATABASE IF NOT EXISTS `db_hdb_uc` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `db_hdb_uc`;
 
+DROP TABLE IF EXISTS `conn_test`;
 
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- ----------------------------
