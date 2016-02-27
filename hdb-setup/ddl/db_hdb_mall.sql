@@ -18,7 +18,7 @@ USE `db_hdb_mall`;
 
 CREATE TABLE `conn_test` (
   `a` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- 导出  表 db_hdb_mall.inventory 结构
