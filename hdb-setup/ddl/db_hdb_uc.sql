@@ -80,10 +80,6 @@ CREATE TABLE `user_address` (
   KEY `idx_address_userid` (`user_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户收货人（地址）信息表';
 
-CREATE TABLE `conn_test` (
-  `a` char(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 
 -- ----------------------------
 -- Table structure for weixin_user
