@@ -666,3 +666,7 @@ CREATE TABLE `lottery_order_31` (
   KEY `idx_lottery_order_user_id` (`user_id`),
   KEY `idx_lottery_order_activity_id` (`activity_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31000000001 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
+
+CREATE TABLE `conn_test` (
+  `a` char(1) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
