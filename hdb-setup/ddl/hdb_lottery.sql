@@ -1,3 +1,13 @@
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_hdb_lottery` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+
+USE `db_hdb_lottery`;
+
+DROP TABLE IF EXISTS `conn_test`;
+
+CREATE TABLE `conn_test` (
+  `a` char(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 /*Table structure for table `lottery_activity` */
 
 CREATE TABLE `lottery_activity` (
@@ -6,7 +16,7 @@ CREATE TABLE `lottery_activity` (
   `description` varchar(2048) NOT NULL COMMENT '活动简介',
   `item_id` bigint(20) unsigned NOT NULL COMMENT '商品id',
   `entry_point` int(10) unsigned NOT NULL COMMENT '最小投注点数',
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '活动状态,0-草稿, 1-未开始, 2-已开始, 3-已结束（未抽奖）, 4-未发奖（已抽奖）, 5-已发奖, 6-下架',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '活动状态,0-草稿, 1-上架, 2-未开始, 3-已开始, 4-已结束（未抽奖）, 5-未发奖（已抽奖）, 6-已发奖, 7-下架',
   `start_time` datetime NOT NULL COMMENT '活动开始时间',
   `betting_number` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '已经投注人数',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
@@ -14,9 +24,9 @@ CREATE TABLE `lottery_activity` (
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   `updater` varchar(128) NOT NULL DEFAULT 'sys' COMMENT '更新者',
   `end_time` datetime DEFAULT NULL COMMENT '活动结束时间',
-  `on_time` datetime NOT NULL COMMENT '上架时间',
-  `off_time` datetime NOT NULL COMMENT '下架时间',
-  `draw_time` datetime NOT NULL COMMENT '开奖时间',
+  `on_time` datetime DEFAULT NULL COMMENT '上架时间',
+  `off_time` datetime DEFAULT NULL COMMENT '下架时间',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
   `winner_num` int(11) NOT NULL DEFAULT '1' COMMENT '中奖人数',
     PRIMARY KEY (`id`),
   KEY `idx_status` (`status`),
@@ -667,6 +677,15 @@ CREATE TABLE `lottery_order_31` (
   KEY `idx_lottery_order_activity_id` (`activity_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31000000001 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
 
+<<<<<<< HEAD
+CREATE TABLE `lottery_winner` (
+  `order_id` bigint(20) unsigned NOT NULL COMMENT '订单ID',
+  `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动ID',
+  `user_id` bigint(20) unsigned NOT NULL COMMENT '用户ID',
+  PRIMARY KEY (`order_id`,`activity_id`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='中奖列表';
+=======
 CREATE TABLE `conn_test` (
   `a` char(1) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+>>>>>>> 5fc9464ca4fbe2b12ba782d96e11839fcabfa5d0
