@@ -34,6 +34,20 @@ start() {
     sleep 1
 }
 
+
+add_pinpoint() {
+    DEST_FILE=${WORK_DIR}/tomcat-${COMPONNET}/bin/setenv.sh
+cat <<EOF>$DEST_FILE
+AGENT_PATH=/data/pinpoint-agent
+VERSION=1.5.1
+AGENT_ID=${COMPONNET}
+APP_NAME=${COMPONNET}
+export JAVA_OPTS="-javaagent:\$AGENT_PATH/pinpoint-bootstrap-\$VERSION.jar -Dpinpoint.agentId=\${AGENT_ID} -Dpinpoint.applicationName=\${APP_NAME}"
+EOF
+
+}
+
+
 reset() {
 	[ -d ${WORK_DIR}/tomcat-${COMPONNET} ] && rm -rf ${WORK_DIR}/tomcat-${COMPONNET}
 	curl --user ${HTTP_BASIC_USER}:${HTTP_BASIC_PASSPORD} ${FILE_REPO}/tools/${TOMCAT_PACKAGE_NAME}.tar.gz > /tmp/${TOMCAT_PACKAGE_NAME}.tar.gz
@@ -43,6 +57,7 @@ reset() {
     sed -i "s/8005/${SHUTDOWN_PORT}/g" ${WORK_DIR}/tomcat-${COMPONNET}/conf/server.xml
     sed -i "s/8009/${AJP_PORT}/g" ${WORK_DIR}/tomcat-${COMPONNET}/conf/server.xml
     sed -i "s/8080/${LISTEN_PORT}/g" ${WORK_DIR}/tomcat-${COMPONNET}/conf/server.xml
+    add_pinpoint
     rm -rf ${WORK_DIR}/tomcat-${COMPONNET}/webapps/* 
     curl --user ${HTTP_BASIC_USER}:${HTTP_BASIC_PASSPORD} ${FILE_REPO}/builds/${TARGET_ENV}/${COMPONNET}/${COMPONNET}-latest.war > ${WORK_DIR}/tomcat-${COMPONNET}/webapps/${COMPONNET}.war
 }
