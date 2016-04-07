@@ -677,15 +677,18 @@ CREATE TABLE `lottery_order_31` (
   KEY `idx_lottery_order_activity_id` (`activity_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31000000001 DEFAULT CHARSET=utf8 COMMENT='抽奖订单表';
 
-<<<<<<< HEAD
+
 CREATE TABLE `lottery_winner` (
   `order_id` bigint(20) unsigned NOT NULL COMMENT '订单ID',
   `activity_id` bigint(20) unsigned NOT NULL COMMENT '活动ID',
   `user_id` bigint(20) unsigned NOT NULL COMMENT '用户ID',
+  `activity_title` varchar(256) DEFAULT NULL COMMENT '活动标题',
+  `user_phone` varchar(128) DEFAULT '' COMMENT '手机号',
+  `draw_time` datetime DEFAULT NULL COMMENT '开奖时间',
   PRIMARY KEY (`order_id`,`activity_id`,`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='中奖列表';
-=======
+
 CREATE TABLE `conn_test` (
   `a` char(1) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
->>>>>>> 5fc9464ca4fbe2b12ba782d96e11839fcabfa5d0
+
